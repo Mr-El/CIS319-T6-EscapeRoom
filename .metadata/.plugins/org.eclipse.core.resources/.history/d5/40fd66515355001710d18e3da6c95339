@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package escapeRoom;
+
+/**
+ * @author Mr_El
+ * Player class will involve entity that moves via user input
+ */
+public class Player {
+	int x = 0;
+	int y = 0;
+	int xa = 1;
+	int ya = 1;
+}

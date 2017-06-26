@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package escapeRoom;
+
+import java.awt.Graphics2D;
+
+/**
+ * @author Mr_El
+ * Player class will involve entity that moves via user input
+ */
+public class Player {
+	int x = 0; //starting coordinates
+	int y = 0;
+	int moveX = 1;
+	int moveY = 1;
+	
+	public void paint(Graphics2D g) {
+		
+	}
+}

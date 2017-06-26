@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package escapeRoom;
+
+
+
+import javax.swing.JFrame;
+
+/**
+ * @author Mr_El
+ * Commit only the classes and metadata to the github!!!
+ */
+public class Game {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) { //Where game will start.
+		JFrame frame = new JFrame("Escape Room");
+		frame.setSize(800, 600);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}
