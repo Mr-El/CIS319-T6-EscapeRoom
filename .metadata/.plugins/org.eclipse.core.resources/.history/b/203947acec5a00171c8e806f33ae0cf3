@@ -19,7 +19,6 @@ public class Game {
 	private JFrame frame;
 	
 	Player player = new Player(this);
-	Background background = new Background();
 	
 	private void move() {
 		player.move();
@@ -31,7 +30,6 @@ public class Game {
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, //turns on anitialising
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		player.paint(g2d);
-		background.paint(g2d);
 	}
 		
 	/**

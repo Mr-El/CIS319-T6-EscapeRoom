@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package escapeRoom;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+/**
+ * @author Mr_El
+ *
+ */
+public class Background {
+	Image img = Toolkit.getDefaultToolkit().createImage("RoomStart.jpg");
+	
+	public void paint(Graphics g) {
+		g.drawImage(img, 0, 0, null);
+	}
+}

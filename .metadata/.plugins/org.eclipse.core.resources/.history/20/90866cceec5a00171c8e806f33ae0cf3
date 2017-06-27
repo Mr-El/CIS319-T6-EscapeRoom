@@ -19,7 +19,7 @@ public class Game {
 	private JFrame frame;
 	
 	Player player = new Player(this);
-	Background background = new Background();
+	Background background = new Background(this);
 	
 	private void move() {
 		player.move();
