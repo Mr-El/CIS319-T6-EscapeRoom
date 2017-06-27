@@ -1,17 +1,22 @@
 package escapeRoom;
 
+import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
 import javax.swing.JFrame;
+import java.awt.Canvas;
+import java.awt.BorderLayout;
+import java.awt.GridBagLayout;
 import javax.swing.JLabel;
+import java.awt.GridBagConstraints;
 import javax.swing.JButton;
+import java.awt.Insets;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SpringLayout;
-import java.awt.Color;
 
 /**
  * @author Mr_El
@@ -23,7 +28,7 @@ public class Game {
 	private JFrame frame;
 	
 	Player player = new Player(this);
-	ClassRoom background = new ClassRoom();
+	Background background = new Background();
 	
 	private void move() {
 		player.move();
@@ -43,7 +48,6 @@ public class Game {
 	 */
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Escape Room");
-		frame.getContentPane().setBackground(Color.GREEN);
 		frame.setSize(800, 600); //Standard window size
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -51,13 +55,13 @@ public class Game {
 		frame.getContentPane().setLayout(springLayout);
 		
 		JLabel lblClassroomEscape = new JLabel("Classroom Escape");
-		springLayout.putConstraint(SpringLayout.NORTH, lblClassroomEscape, 178, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, lblClassroomEscape, 152, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.NORTH, lblClassroomEscape, 180, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, lblClassroomEscape, 109, SpringLayout.WEST, frame.getContentPane());
 		lblClassroomEscape.setFont(new Font("Tele-Marines", Font.BOLD, 26));
 		frame.getContentPane().add(lblClassroomEscape);
 		
 		JButton btnOptions = new JButton("Options");
-		springLayout.putConstraint(SpringLayout.WEST, btnOptions, 89, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, btnOptions, 64, SpringLayout.WEST, frame.getContentPane());
 		btnOptions.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -66,9 +70,9 @@ public class Game {
 		frame.getContentPane().add(btnOptions);
 		
 		JButton btnPlay = new JButton("Play");
+		springLayout.putConstraint(SpringLayout.SOUTH, btnPlay, -130, SpringLayout.SOUTH, frame.getContentPane());
 		springLayout.putConstraint(SpringLayout.NORTH, btnOptions, 0, SpringLayout.NORTH, btnPlay);
-		springLayout.putConstraint(SpringLayout.SOUTH, btnPlay, -159, SpringLayout.SOUTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, btnPlay, -162, SpringLayout.EAST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, btnPlay, -173, SpringLayout.EAST, frame.getContentPane());
 		btnPlay.setFont(new Font("Stencil", Font.PLAIN, 17));
 		frame.getContentPane().add(btnPlay);
 	}
