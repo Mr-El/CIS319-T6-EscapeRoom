@@ -6,4 +6,10 @@
 		<item value="220" key="y"/>
 		<item value="635" key="height"/>
 	</section>
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.icon.IconPropertyEditor$ImageDialog">
+		<item value="266" key="x"/>
+		<item value="1147" key="width"/>
+		<item value="143" key="y"/>
+		<item value="714" key="height"/>
+	</section>
 </section>

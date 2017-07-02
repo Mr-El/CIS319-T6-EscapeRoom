@@ -7,6 +7,8 @@ import java.awt.RenderingHints;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import javax.swing.JDialog;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -23,7 +25,7 @@ public class Game {
 	private JFrame frame;
 	
 	Player player = new Player(this);
-	ClassRoom background = new ClassRoom();
+	//ClassRoom background = new ClassRoom();
 	
 	private void move() {
 		player.move();
@@ -35,7 +37,11 @@ public class Game {
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, //turns on anitialising
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		player.paint(g2d);
-		background.paint(g2d);
+		//background.paint(g2d);
+	}
+	
+	private void btnPlayActionPreformed(java.awt.event.ActionEvent evt) {
+		new ChemistryRoom().setVisible(true);
 	}
 		
 	/**
@@ -71,6 +77,22 @@ public class Game {
 		springLayout.putConstraint(SpringLayout.EAST, btnPlay, -162, SpringLayout.EAST, frame.getContentPane());
 		btnPlay.setFont(new Font("Stencil", Font.PLAIN, 17));
 		frame.getContentPane().add(btnPlay);
+		
+		//Links windows together
+		btnPlay.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new ChemistryRoom().setVisible(true);
+				new ChemistryRoom().setSize(800, 600);
+				frame.setVisible(false);
+			}
+		});
+		
+		btnOptions.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new Options().setVisible(true);
+				frame.setVisible(false);
+			}
+		});
 	}
 
 	/**
