@@ -111,7 +111,7 @@ public class ChemistryRoom extends JFrame {
 		toolBar.setBackground(new Color(240, 240, 240));
 		toolBar.setForeground(new Color(0, 0, 0));
 		toolBar.setToolTipText("");
-		toolBar.setBounds(0, 533, 955, 43);
+		toolBar.setBounds(0, 540, 955, 36);
 		contentPane.add(toolBar);
 		
 		JLabel lblNewLabel = new JLabel("Image");

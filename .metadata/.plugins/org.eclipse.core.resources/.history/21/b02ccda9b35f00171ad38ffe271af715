@@ -12,9 +12,6 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.SpringLayout;
 import javax.swing.JButton;
-import javax.swing.JMenuBar;
-import javax.swing.JToolBar;
-import java.awt.Color;
 
 public class ChemistryRoom extends JFrame {
 
@@ -106,13 +103,6 @@ public class ChemistryRoom extends JFrame {
 		});
 		btnBook.setBounds(675, 269, 133, 78);
 		contentPane.add(btnBook);
-		
-		JToolBar toolBar = new JToolBar("testing");
-		toolBar.setBackground(new Color(240, 240, 240));
-		toolBar.setForeground(new Color(0, 0, 0));
-		toolBar.setToolTipText("");
-		toolBar.setBounds(0, 533, 955, 43);
-		contentPane.add(toolBar);
 		
 		JLabel lblNewLabel = new JLabel("Image");
 		lblNewLabel.setBounds(0, 0, 955, 576);

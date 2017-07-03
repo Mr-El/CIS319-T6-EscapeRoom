@@ -42,18 +42,17 @@ public class ChemistryDoor extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		SpringLayout sl_contentPane = new SpringLayout();
+		contentPane.setLayout(sl_contentPane);
 		
-		JButton btnDoor = new JButton();
-		btnDoor.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnDoor.setBounds(527, 259, 85, 81);
-		contentPane.add(btnDoor);
+		JLabel lblNewLabel = new JLabel("New label");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, lblNewLabel, 5, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, lblNewLabel, 5, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, lblNewLabel, 780, SpringLayout.WEST, contentPane);
+		lblNewLabel.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/escapeRoom/door.jpg")));
+		contentPane.add(lblNewLabel);
 		
 		JButton btnBack = new JButton("Back");
-		btnBack.setBounds(5, 5, 59, 25);
 		contentPane.add(btnBack);
 		
 		btnBack.addActionListener(new ActionListener() {
@@ -61,10 +60,6 @@ public class ChemistryDoor extends JFrame {
 				new ChemistryRoom().setVisible(true);
 			}
 		});
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(10, 10, 775, 522);
-		lblNewLabel.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/escapeRoom/door.jpg")));
-		contentPane.add(lblNewLabel);
 	}
+
 }

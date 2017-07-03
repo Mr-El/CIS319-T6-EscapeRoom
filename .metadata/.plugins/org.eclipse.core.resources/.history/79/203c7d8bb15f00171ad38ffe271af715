@@ -45,12 +45,12 @@ public class ChemistryDoor extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnDoor = new JButton();
-		btnDoor.addActionListener(new ActionListener() {
+		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnDoor.setBounds(527, 259, 85, 81);
-		contentPane.add(btnDoor);
+		btnNewButton.setBounds(527, 259, 85, 81);
+		contentPane.add(btnNewButton);
 		
 		JButton btnBack = new JButton("Back");
 		btnBack.setBounds(5, 5, 59, 25);
