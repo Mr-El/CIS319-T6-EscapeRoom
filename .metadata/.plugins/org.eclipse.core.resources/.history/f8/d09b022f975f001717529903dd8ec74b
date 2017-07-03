@@ -1,0 +1,51 @@
+package escapeRoom;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.SpringLayout;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+
+public class ChemistryPeridodicTable extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ChemistryTeachersDesk frame = new ChemistryTeachersDesk();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ChemistryPeridodicTable() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 794, 558);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		SpringLayout sl_contentPane = new SpringLayout();
+		contentPane.setLayout(sl_contentPane);
+		
+		JLabel lblPicture = new JLabel("picture");
+		lblPicture.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/escapeRoom/periodicTable.jpg")));
+		sl_contentPane.putConstraint(SpringLayout.NORTH, lblPicture, 0, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, lblPicture, 0, SpringLayout.WEST, contentPane);
+		contentPane.add(lblPicture);
+	}
+}

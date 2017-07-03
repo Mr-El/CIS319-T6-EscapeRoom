@@ -40,30 +40,73 @@ public class ChemistryRoom extends JFrame {
 	 * Create the frame.
 	 */
 	public ChemistryRoom() {
+		JFrame frame = new JFrame();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 801, 611);
+		setBounds(100, 100, 1051, 627);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		SpringLayout sl_contentPane = new SpringLayout();
-		contentPane.setLayout(sl_contentPane);
+		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		sl_contentPane.putConstraint(SpringLayout.NORTH, lblNewLabel, 5, SpringLayout.NORTH, contentPane);
-		sl_contentPane.putConstraint(SpringLayout.WEST, lblNewLabel, 5, SpringLayout.WEST, contentPane);
-		sl_contentPane.putConstraint(SpringLayout.EAST, lblNewLabel, 778, SpringLayout.WEST, contentPane);
-		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/StartScene.jpg")));
-		contentPane.add(lblNewLabel);
-		
-		JButton btn2Door = new JButton("To the door");
+		JButton btn2Door = new JButton();
+		btn2Door.setBounds(47, 160, 154, 184);
 		contentPane.add(btn2Door);
-		//btn2Door.setVisible(false);
-		//btn2Door.setEnabled(true);
+		btn2Door.setOpaque(false); //makes button invisible
+		btn2Door.setContentAreaFilled(false);
+		btn2Door.setBorderPainted(false);
 		
 		btn2Door.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new ChemistryDoor().setVisible(true);
+				dispose();
 			}
 		});
+		
+		JButton btnTeachersDesk = new JButton();
+		btnTeachersDesk.setBounds(816, 288, 139, 173);
+		contentPane.add(btnTeachersDesk);
+		btnTeachersDesk.setOpaque(false);
+		btnTeachersDesk.setContentAreaFilled(false);
+		btnTeachersDesk.setBorderPainted(false);
+		
+		btnTeachersDesk.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new ChemistryTeachersDesk().setVisible(true);
+				dispose();
+			}
+		});
+		
+		JButton btnPeriodicTable = new JButton();
+		btnPeriodicTable.setBounds(889, 53, 81, 222);
+		contentPane.add(btnPeriodicTable);
+		btnPeriodicTable.setOpaque(false);
+		btnPeriodicTable.setContentAreaFilled(false);
+		btnPeriodicTable.setBorderPainted(false);
+		
+		btnPeriodicTable.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new PeriodicTable().setVisible(true);
+				dispose();
+			}
+		});
+		
+		JButton btnBook = new JButton();
+		btnBook.setOpaque(false);
+		btnBook.setContentAreaFilled(false);
+		btnBook.setBorderPainted(false);
+		
+		btnBook.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new Book().setVisible(true);
+				dispose();
+			}
+		});
+		btnBook.setBounds(675, 269, 133, 78);
+		contentPane.add(btnBook);
+		
+		JLabel lblNewLabel = new JLabel("Image");
+		lblNewLabel.setBounds(0, 0, 955, 576);
+		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/StartScene.jpg")));
+		contentPane.add(lblNewLabel);
 	}
 }

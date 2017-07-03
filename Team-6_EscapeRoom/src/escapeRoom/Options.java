@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JSlider;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 
 public class Options extends JFrame {
 
@@ -50,18 +51,18 @@ public class Options extends JFrame {
 		contentPane.setLayout(sl_contentPane);
 		
 		JLabel lblVolume = new JLabel("Volume");
-		sl_contentPane.putConstraint(SpringLayout.WEST, lblVolume, 10, SpringLayout.WEST, contentPane);
-		sl_contentPane.putConstraint(SpringLayout.SOUTH, lblVolume, -86, SpringLayout.SOUTH, contentPane);
 		contentPane.add(lblVolume);
 		
 		JLabel lblAudio = new JLabel("Audio");
-		sl_contentPane.putConstraint(SpringLayout.NORTH, lblAudio, 38, SpringLayout.NORTH, contentPane);
 		sl_contentPane.putConstraint(SpringLayout.WEST, lblAudio, 10, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.NORTH, lblVolume, 62, SpringLayout.SOUTH, lblAudio);
+		sl_contentPane.putConstraint(SpringLayout.WEST, lblVolume, 0, SpringLayout.WEST, lblAudio);
+		sl_contentPane.putConstraint(SpringLayout.NORTH, lblAudio, 10, SpringLayout.NORTH, contentPane);
 		contentPane.add(lblAudio);
 		
 		JRadioButton rdbtnStereo = new JRadioButton("Stereo");
-		sl_contentPane.putConstraint(SpringLayout.NORTH, rdbtnStereo, 0, SpringLayout.NORTH, lblAudio);
-		sl_contentPane.putConstraint(SpringLayout.EAST, rdbtnStereo, -106, SpringLayout.EAST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.NORTH, rdbtnStereo, -4, SpringLayout.NORTH, lblAudio);
+		sl_contentPane.putConstraint(SpringLayout.EAST, rdbtnStereo, -104, SpringLayout.EAST, contentPane);
 		contentPane.add(rdbtnStereo);
 		
 		JRadioButton rdbtnMono = new JRadioButton("Mono");
@@ -75,18 +76,28 @@ public class Options extends JFrame {
 		contentPane.add(slider);
 		
 		JLabel label = new JLabel("0");
-		sl_contentPane.putConstraint(SpringLayout.NORTH, label, 6, SpringLayout.SOUTH, slider);
+		sl_contentPane.putConstraint(SpringLayout.NORTH, label, 5, SpringLayout.SOUTH, slider);
 		sl_contentPane.putConstraint(SpringLayout.WEST, label, 0, SpringLayout.WEST, slider);
 		contentPane.add(label);
 		
 		JLabel label_1 = new JLabel("100");
-		sl_contentPane.putConstraint(SpringLayout.SOUTH, label_1, 0, SpringLayout.SOUTH, label);
-		sl_contentPane.putConstraint(SpringLayout.EAST, label_1, 0, SpringLayout.EAST, slider);
+		sl_contentPane.putConstraint(SpringLayout.NORTH, label_1, 0, SpringLayout.NORTH, label);
+		sl_contentPane.putConstraint(SpringLayout.EAST, label_1, -70, SpringLayout.EAST, contentPane);
 		contentPane.add(label_1);
 		
 		JButton button = new JButton("<- Back");
 		sl_contentPane.putConstraint(SpringLayout.SOUTH, button, 0, SpringLayout.SOUTH, contentPane);
 		sl_contentPane.putConstraint(SpringLayout.EAST, button, 0, SpringLayout.EAST, contentPane);
 		contentPane.add(button);
+		
+		JLabel lblResolution = new JLabel("Resolution");
+		sl_contentPane.putConstraint(SpringLayout.WEST, lblResolution, 0, SpringLayout.WEST, lblVolume);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, lblResolution, -49, SpringLayout.SOUTH, contentPane);
+		contentPane.add(lblResolution);
+		
+		JComboBox comboBox = new JComboBox();
+		sl_contentPane.putConstraint(SpringLayout.NORTH, comboBox, -3, SpringLayout.NORTH, lblResolution);
+		sl_contentPane.putConstraint(SpringLayout.EAST, comboBox, 0, SpringLayout.EAST, label_1);
+		contentPane.add(comboBox);
 	}
 }
