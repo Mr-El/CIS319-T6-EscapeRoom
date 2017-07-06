@@ -27,6 +27,9 @@ public class Game {
 	Player player = new Player(this);
 	//ClassRoom background = new ClassRoom();
 	
+	private void move() {
+		player.move();
+	}
 	
 	public void paint(Graphics g) {
 		//super.paint(g);

@@ -27,6 +27,9 @@ public class Game {
 	Player player = new Player(this);
 	//ClassRoom background = new ClassRoom();
 	
+	private void move() {
+		player.move();
+	}
 	
 	public void paint(Graphics g) {
 		//super.paint(g);
@@ -37,7 +40,9 @@ public class Game {
 		//background.paint(g2d);
 	}
 	
-	
+	private void btnPlayActionPreformed(java.awt.event.ActionEvent evt) {
+		new ChemistryRoom().setVisible(true);
+	}
 		
 	/**
 	 * Launch the application.

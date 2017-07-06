@@ -128,7 +128,6 @@ public class ChemistryRoom extends JFrame {
 		});
 		
 		btnFlask.setContentAreaFilled(false);
-		btnFlask.setBorderPainted(false);
 		btnFlask.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/flask.png")));
 		btnFlask.setBounds(265, 265, 58, 58);
 		contentPane.add(btnFlask);

@@ -113,25 +113,20 @@ public class ChemistryRoom extends JFrame {
 		btnBook.setBounds(505, 258, 87, 65);
 		contentPane.add(btnBook);
 		
+		JButton btnFlask = new JButton("New button");
+		btnFlask.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnFlask.setBounds(361, 279, 97, 25);
+		contentPane.add(btnFlask);
+		
 		JToolBar toolBar = new JToolBar("testing");
 		toolBar.setBackground(new Color(240, 240, 240));
 		toolBar.setForeground(new Color(0, 0, 0));
 		toolBar.setToolTipText("");
 		toolBar.setBounds(0, 533, 955, 43);
 		contentPane.add(toolBar);
-		
-		JButton btnFlask = new JButton();
-		btnFlask.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				btnFlask.setVisible(false);
-			}
-		});
-		
-		btnFlask.setContentAreaFilled(false);
-		btnFlask.setBorderPainted(false);
-		btnFlask.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/flask.png")));
-		btnFlask.setBounds(265, 265, 58, 58);
-		contentPane.add(btnFlask);
 		
 		
 		
