@@ -151,7 +151,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_uHFIGWH2Eeek8s0dEsDuzw" elementId="org.eclipse.ui.editorss" selectedElement="_uHFIGmH2Eeek8s0dEsDuzw">
-      <children xsi:type="basic:PartStack" xmi:id="_uHFIGmH2Eeek8s0dEsDuzw" elementId="PartStack@1d66c7f4" selectedElement="_uHFIG2H2Eeek8s0dEsDuzw">
+      <children xsi:type="basic:PartStack" xmi:id="_uHFIGmH2Eeek8s0dEsDuzw" elementId="PartStack@1d66c7f4" selectedElement="_uHFIImH2Eeek8s0dEsDuzw">
         <tags>active</tags>
         <tags>noFocus</tags>
         <children xsi:type="basic:Part" xmi:id="_uHFIG2H2Eeek8s0dEsDuzw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Game.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" closeable="true">
@@ -159,8 +159,6 @@
           <tags>Editor</tags>
           <tags>org.eclipse.wb.core.guiEditor</tags>
           <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
           <menus xsi:type="menu:PopupMenu" xmi:id="_uHFIHGH2Eeek8s0dEsDuzw" elementId="#CompilationUnitEditorContext">
             <tags>menuContribution:popup</tags>
             <tags>popup:#CompilationUnitEditorContext</tags>
@@ -195,10 +193,12 @@
           </menus>
         </children>
         <children xsi:type="basic:Part" xmi:id="_uHFIImH2Eeek8s0dEsDuzw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ChemistryDoor.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;ChemistryDoor.java&quot; partName=&quot;ChemistryDoor.java&quot; title=&quot;ChemistryDoor.java&quot; tooltip=&quot;Team-6_EscapeRoom/src/escapeRoom/ChemistryDoor.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Team-6_EscapeRoom/src/escapeRoom/ChemistryDoor.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1686&quot; selectionTopPixel=&quot;600&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;ChemistryDoor.java&quot; partName=&quot;ChemistryDoor.java&quot; title=&quot;ChemistryDoor.java&quot; tooltip=&quot;Team-6_EscapeRoom/src/escapeRoom/ChemistryDoor.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Team-6_EscapeRoom/src/escapeRoom/ChemistryDoor.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;821&quot; selectionTopPixel=&quot;80&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.wb.core.guiEditor</tags>
           <tags>removeOnHide</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
           <menus xsi:type="menu:PopupMenu" xmi:id="_uHFII2H2Eeek8s0dEsDuzw" elementId="#CompilationUnitEditorContext">
             <tags>menuContribution:popup</tags>
             <tags>popup:#CompilationUnitEditorContext</tags>
@@ -233,7 +233,7 @@
           </menus>
         </children>
         <children xsi:type="basic:Part" xmi:id="_uHFIKWH2Eeek8s0dEsDuzw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ChemistryRoom.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;ChemistryRoom.java&quot; partName=&quot;ChemistryRoom.java&quot; title=&quot;ChemistryRoom.java&quot; tooltip=&quot;Team-6_EscapeRoom/src/escapeRoom/ChemistryRoom.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Team-6_EscapeRoom/src/escapeRoom/ChemistryRoom.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3752&quot; selectionTopPixel=&quot;1779&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;ChemistryRoom.java&quot; partName=&quot;ChemistryRoom.java&quot; title=&quot;ChemistryRoom.java&quot; tooltip=&quot;Team-6_EscapeRoom/src/escapeRoom/ChemistryRoom.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Team-6_EscapeRoom/src/escapeRoom/ChemistryRoom.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;4160&quot; selectionTopPixel=&quot;2009&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.wb.core.guiEditor</tags>
           <tags>removeOnHide</tags>
@@ -548,7 +548,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uHFJM2H2Eeek8s0dEsDuzw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_2OzTgGIEEee6KL5aBz8D5A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_uHGXsGH2Eeek8s0dEsDuzw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_smb0oGIQEeeBh4YcZRPB6A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_uHGXsGH2Eeek8s0dEsDuzw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uHFJQWH2Eeek8s0dEsDuzw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -572,7 +572,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uHFJfGH2Eeek8s0dEsDuzw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_2O4zEGIEEee6KL5aBz8D5A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_uHGXJ2H2Eeek8s0dEsDuzw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_smgGEGIQEeeBh4YcZRPB6A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_uHGXJ2H2Eeek8s0dEsDuzw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uHFJh2H2Eeek8s0dEsDuzw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

@@ -39,7 +39,7 @@ public class ChemistryDoor extends JFrame {
 	 */
 	public ChemistryDoor() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 795, 570);
+		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -80,7 +80,7 @@ public class ChemistryDoor extends JFrame {
 		contentPane.add(btnJug);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(0, 0, 775, 522);
+		lblNewLabel.setBounds(10, 10, 775, 522);
 		lblNewLabel.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/escapeRoom/door.jpg")));
 		contentPane.add(lblNewLabel);
 	}

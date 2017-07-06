@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -39,7 +38,7 @@ public class ChemistryDoor extends JFrame {
 	 */
 	public ChemistryDoor() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 795, 570);
+		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -67,20 +66,18 @@ public class ChemistryDoor extends JFrame {
 			}
 		});
 		
-		JButton btnJug = new JButton();
+		JButton btnJug = new JButton("Jug");
 		btnJug.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				btnJug.setVisible(false);
 			}
 		});
 		btnJug.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/escapeRoom/waterjug.png")));
-		btnJug.setBounds(136, 432, 99, 87);
-		btnJug.setOpaque(false);
-		btnJug.setContentAreaFilled(false);
+		btnJug.setBounds(186, 377, 121, 87);
 		contentPane.add(btnJug);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(0, 0, 775, 522);
+		lblNewLabel.setBounds(10, 10, 775, 522);
 		lblNewLabel.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/escapeRoom/door.jpg")));
 		contentPane.add(lblNewLabel);
 	}
