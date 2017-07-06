@@ -78,6 +78,21 @@ public class Game {
 		btnPlay.setFont(new Font("Stencil", Font.PLAIN, 17));
 		frame.getContentPane().add(btnPlay);
 		
+		JButton btnQuit = new JButton("Quit");
+		btnQuit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		springLayout.putConstraint(SpringLayout.SOUTH, btnQuit, -85, SpringLayout.SOUTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, btnQuit, -310, SpringLayout.EAST, frame.getContentPane());
+		frame.getContentPane().add(btnQuit);
+		
+		JButton btnCredits = new JButton("Credits");
+		springLayout.putConstraint(SpringLayout.NORTH, btnCredits, 0, SpringLayout.NORTH, btnQuit);
+		springLayout.putConstraint(SpringLayout.EAST, btnCredits, -104, SpringLayout.WEST, btnQuit);
+		frame.getContentPane().add(btnCredits);
+		
 		//Links windows together
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -36,7 +36,7 @@ public class Book extends JFrame {
 	 * Create the frame.
 	 */
 	public Book() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 477, 301);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -55,7 +55,6 @@ public class Book extends JFrame {
 		JButton button = new JButton("<- Back");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new ChemistryRoom().setVisible(true);
 				dispose();
 			}
 		});

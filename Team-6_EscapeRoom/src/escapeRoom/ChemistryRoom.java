@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JMenuBar;
 import javax.swing.JToolBar;
 import java.awt.Color;
+import java.awt.Dimension;
 
 public class ChemistryRoom extends JFrame {
 
@@ -37,6 +38,9 @@ public class ChemistryRoom extends JFrame {
 				}
 			}
 		});
+		
+		JFrame frame1 = new Toolbar();
+		frame1.setVisible(true);
 	}
 
 	/**
@@ -45,14 +49,15 @@ public class ChemistryRoom extends JFrame {
 	public ChemistryRoom() {
 		JFrame frame = new JFrame();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1051, 627);
+		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
 		JButton btn2Door = new JButton();
-		btn2Door.setBounds(47, 160, 154, 184);
+		btn2Door.setBounds(-83, 132, 154, 184);
 		contentPane.add(btn2Door);
 		btn2Door.setOpaque(false); //makes button invisible
 		btn2Door.setContentAreaFilled(false);
@@ -66,7 +71,7 @@ public class ChemistryRoom extends JFrame {
 		});
 		
 		JButton btnTeachersDesk = new JButton();
-		btnTeachersDesk.setBounds(816, 288, 139, 173);
+		btnTeachersDesk.setBounds(645, 279, 169, 265);
 		contentPane.add(btnTeachersDesk);
 		btnTeachersDesk.setOpaque(false);
 		btnTeachersDesk.setContentAreaFilled(false);
@@ -80,7 +85,7 @@ public class ChemistryRoom extends JFrame {
 		});
 		
 		JButton btnPeriodicTable = new JButton();
-		btnPeriodicTable.setBounds(889, 53, 81, 222);
+		btnPeriodicTable.setBounds(732, 26, 81, 222);
 		contentPane.add(btnPeriodicTable);
 		btnPeriodicTable.setOpaque(false);
 		btnPeriodicTable.setContentAreaFilled(false);
@@ -94,17 +99,18 @@ public class ChemistryRoom extends JFrame {
 		});
 		
 		JButton btnBook = new JButton();
-		btnBook.setOpaque(false);
+		btnBook.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/textbook.png")));
+		//btnBook.setOpaque(false);
 		btnBook.setContentAreaFilled(false);
 		btnBook.setBorderPainted(false);
 		
 		btnBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Book().setVisible(true);
-				dispose();
+				btnBook.setVisible(false);
 			}
 		});
-		btnBook.setBounds(675, 269, 133, 78);
+		btnBook.setBounds(505, 258, 87, 65);
 		contentPane.add(btnBook);
 		
 		JToolBar toolBar = new JToolBar("testing");
@@ -114,9 +120,11 @@ public class ChemistryRoom extends JFrame {
 		toolBar.setBounds(0, 533, 955, 43);
 		contentPane.add(toolBar);
 		
+		
+		
 		JLabel lblNewLabel = new JLabel("Image");
 		lblNewLabel.setBounds(0, 0, 955, 576);
-		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/StartScene.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/ChemistryRoom-01.jpg")));
 		contentPane.add(lblNewLabel);
 	}
 }

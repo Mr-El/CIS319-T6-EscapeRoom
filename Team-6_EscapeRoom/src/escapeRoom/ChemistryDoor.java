@@ -51,14 +51,18 @@ public class ChemistryDoor extends JFrame {
 		});
 		btnDoor.setBounds(527, 259, 85, 81);
 		contentPane.add(btnDoor);
+		btnDoor.setOpaque(false);
+		btnDoor.setContentAreaFilled(false);
+		btnDoor.setBorderPainted(false);
 		
-		JButton btnBack = new JButton("Back");
+		JButton btnBack = new JButton("<- Back");
 		btnBack.setBounds(5, 5, 59, 25);
 		contentPane.add(btnBack);
 		
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new ChemistryRoom().setVisible(true);
+				dispose();
 			}
 		});
 		
