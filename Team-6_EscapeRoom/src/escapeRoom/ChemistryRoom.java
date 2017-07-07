@@ -1,6 +1,5 @@
 package escapeRoom;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,15 +9,12 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
-import javax.swing.SpringLayout;
 import javax.swing.JButton;
-import javax.swing.JMenuBar;
 import javax.swing.JToolBar;
 import java.awt.Color;
-import java.awt.Dimension;
 
 public class ChemistryRoom extends JFrame {
-
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -47,6 +43,7 @@ public class ChemistryRoom extends JFrame {
 	 * Create the frame.
 	 */
 	public ChemistryRoom() {
+		@SuppressWarnings("unused")
 		JFrame frame = new JFrame();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);

@@ -10,6 +10,8 @@ import javax.swing.*;
  *
  */
 public class Toolbar extends JFrame {
+	private static final long serialVersionUID = 1L;
+
 	void ToolbarTest() {
 		JToolBar toolbar = new JToolBar();
 		

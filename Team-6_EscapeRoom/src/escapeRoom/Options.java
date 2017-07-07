@@ -1,10 +1,6 @@
 package escapeRoom;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -16,7 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 
 public class Options extends JFrame {
-
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -95,6 +91,7 @@ public class Options extends JFrame {
 		sl_contentPane.putConstraint(SpringLayout.SOUTH, lblResolution, -49, SpringLayout.SOUTH, contentPane);
 		contentPane.add(lblResolution);
 		
+		@SuppressWarnings("rawtypes")
 		JComboBox comboBox = new JComboBox();
 		sl_contentPane.putConstraint(SpringLayout.NORTH, comboBox, -3, SpringLayout.NORTH, lblResolution);
 		sl_contentPane.putConstraint(SpringLayout.EAST, comboBox, 0, SpringLayout.EAST, label_1);

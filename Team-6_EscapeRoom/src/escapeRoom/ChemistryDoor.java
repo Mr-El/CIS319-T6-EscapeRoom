@@ -1,19 +1,16 @@
 package escapeRoom;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
-import javax.swing.SpringLayout;
 import javax.swing.JButton;
 
+@SuppressWarnings("serial")
 public class ChemistryDoor extends JFrame {
 
 	private JPanel contentPane;
@@ -77,7 +74,21 @@ public class ChemistryDoor extends JFrame {
 		btnJug.setBounds(136, 432, 99, 87);
 		btnJug.setOpaque(false);
 		btnJug.setContentAreaFilled(false);
+		btnJug.setBorderPainted(false);
 		contentPane.add(btnJug);
+		
+		JButton btnPaper = new JButton();
+		btnPaper.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				btnPaper.setVisible(false);
+			}
+		});
+		btnPaper.setContentAreaFilled(false);
+		btnPaper.setBorderPainted(false);
+		btnPaper.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/escapeRoom/paper.png")));
+		btnPaper.setBounds(547, 469, 99, 50);
+		contentPane.add(btnPaper);
 		
 		JLabel lblNewLabel = new JLabel("New label");
 		lblNewLabel.setBounds(0, 0, 775, 522);

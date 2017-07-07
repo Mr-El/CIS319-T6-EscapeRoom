@@ -7,8 +7,6 @@ import java.awt.RenderingHints;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-import javax.swing.JDialog;
-
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -101,6 +99,12 @@ public class Game {
 			public void actionPerformed(ActionEvent e) {
 				new Options().setVisible(true);
 				frame.setVisible(false);
+			}
+		});
+		
+		btnCredits.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new Credits().setVisible(true);
 			}
 		});
 	}
