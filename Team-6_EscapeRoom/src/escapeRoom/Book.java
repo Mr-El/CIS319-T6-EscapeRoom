@@ -17,6 +17,7 @@ public class Book extends JFrame {
 	private JPanel contentPane;
 
 	/**
+	 * TODO: move items to their own .java - Matthew
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
