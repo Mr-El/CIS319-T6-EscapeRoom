@@ -10,6 +10,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JToolBar;
+import java.awt.Color;
 
 @SuppressWarnings("serial")
 public class ChemistryTeachersDesk extends JFrame {
@@ -62,14 +64,38 @@ public class ChemistryTeachersDesk extends JFrame {
 				dispose(); //closes the previous window saving memory
 			}
 		});
-		btnBack.setBounds(0, 528, 97, 25);
+		btnBack.setBounds(0, 0, 97, 25);
 		contentPane.add(btnBack);
 		btnPeriodicTable.setBounds(77, 24, 293, 293);
 		contentPane.add(btnPeriodicTable);
 		
+		JButton btnFlask = new JButton("");
+		btnFlask.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_blue.png")));
+		btnFlask.setBounds(607, 351, 141, 103);
+		contentPane.add(btnFlask);
+		btnFlask.setOpaque(false);
+		
+		JToolBar toolBar = new JToolBar();
+		toolBar.setBackground(Color.RED);
+		toolBar.setBounds(0, 504, 770, 49);
+		contentPane.add(toolBar);
+		
+		JButton btnHydrogen = new JButton("Hydrogen");
+		btnHydrogen.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_small.png")));
+		toolBar.add(btnHydrogen);
+		btnHydrogen.setVisible(false);
+		
 		JLabel lblPicture = new JLabel("picture");
 		lblPicture.setBounds(0, 0, 800, 600);
-		lblPicture.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/escapeRoom/periodicTable.jpg")));
+		lblPicture.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/periodicTable.jpg")));
 		contentPane.add(lblPicture);
+		
+		
+		btnFlask.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnFlask.setVisible(false);
+				btnHydrogen.setVisible(true);
+			}
+		});
 	}
 }

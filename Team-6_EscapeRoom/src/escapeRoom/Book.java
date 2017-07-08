@@ -45,7 +45,7 @@ public class Book extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblBook = new JLabel("Book");
-		lblBook.setIcon(new ImageIcon(Book.class.getResource("/escapeRoom/book.jpg")));
+		lblBook.setIcon(new ImageIcon(Book.class.getResource("/Images/book.jpg")));
 		lblBook.setBounds(161, 58, 330, 196);
 		contentPane.add(lblBook);
 		

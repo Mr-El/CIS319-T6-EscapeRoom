@@ -81,7 +81,7 @@ public class Game {
 		frame.getContentPane().add(panel);
 		
 		JLabel lblBackground = new JLabel();
-		lblBackground.setIcon(new ImageIcon(Game.class.getResource("/escapeRoom/Chemestry-Escape Room.png")));
+		lblBackground.setIcon(new ImageIcon(Game.class.getResource("/Images/Chemestry-Escape Room.png")));
 		lblBackground.setBounds(0, 0, 782, 553);
 		frame.getContentPane().add(lblBackground);
 		lblBackground.revalidate();

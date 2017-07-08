@@ -1,6 +1,7 @@
 package escapeRoom;
 
 import java.awt.EventQueue;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -46,7 +47,7 @@ public class ChemistryRoom extends JFrame {
 		@SuppressWarnings("unused")
 		JFrame frame = new JFrame();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 600);
+		setBounds(100, 100, 800, 631);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -96,37 +97,55 @@ public class ChemistryRoom extends JFrame {
 		});
 		
 		JButton btnBook = new JButton();
-		btnBook.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/textbook.png")));
+		btnBook.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/textbook.png")));
 		//btnBook.setOpaque(false);
 		btnBook.setContentAreaFilled(false);
 		btnBook.setBorderPainted(false);
+		btnBook.setBounds(505, 258, 87, 65);
+		contentPane.add(btnBook);
+		
+		JToolBar toolBar = new JToolBar("Items");
+		toolBar.setBackground(Color.RED);
+		toolBar.setForeground(new Color(0, 0, 0));
+		toolBar.setToolTipText("");
+		toolBar.setBounds(0, 495, 955, 81);
+		contentPane.add(toolBar);
+		
+		JButton btnBook_1 = new JButton("Book");
+		btnBook_1.setBackground(new Color(8, 128, 0));
+		btnBook_1.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/textbook_green.png")));
+		toolBar.add(btnBook_1);
+		btnBook_1.setVisible(false);
+		
+		JButton btnToolFlask = new JButton("Flask");
+		btnToolFlask.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnToolFlask.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/flask.png")));
+		toolBar.add(btnToolFlask);
+		btnToolFlask.setVisible(false);
+		btnToolFlask.setOpaque(false);
 		
 		btnBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Book().setVisible(true);
 				btnBook.setVisible(false);
+				btnBook_1.setVisible(true);
 			}
 		});
-		btnBook.setBounds(505, 258, 87, 65);
-		contentPane.add(btnBook);
-		
-		JToolBar toolBar = new JToolBar("testing");
-		toolBar.setBackground(new Color(240, 240, 240));
-		toolBar.setForeground(new Color(0, 0, 0));
-		toolBar.setToolTipText("");
-		toolBar.setBounds(0, 533, 955, 43);
-		contentPane.add(toolBar);
 		
 		JButton btnFlask = new JButton();
 		btnFlask.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				btnFlask.setVisible(false);
+				btnToolFlask.setVisible(true);
 			}
 		});
 		
 		btnFlask.setContentAreaFilled(false);
 		btnFlask.setBorderPainted(false);
-		btnFlask.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/flask.png")));
+		btnFlask.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/flask.png")));
 		btnFlask.setBounds(265, 265, 58, 58);
 		contentPane.add(btnFlask);
 		
@@ -134,7 +153,7 @@ public class ChemistryRoom extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Image");
 		lblNewLabel.setBounds(0, 0, 955, 576);
-		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/Chemestry-Escape Room.png")));
+		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/Chemestry-Escape Room.png")));
 		contentPane.add(lblNewLabel);
 	}
 }
