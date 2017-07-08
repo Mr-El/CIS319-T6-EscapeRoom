@@ -1,0 +1,132 @@
+/**
+ * 
+ */
+package escapeRoom;
+
+import javax.sound.sampled.AudioSystem;
+
+/**
+ * @author Mr_El
+ *
+ */
+public class Sound1 {
+private Clip clip;
+	
+	// Change file name to match yours, of course
+	public static Sound1 sound1 = new Sound1("/RLD_Installer_11.wav");
+	
+	public Sound1(String fileName) {
+		try {
+			AudioInputStream ais = AudioSystem.getAudioInputStream(Sound1.class.getResource(fileName));
+			clip = AudioSystem.getClip();
+			clip.open(ais);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void play() {
+		try {
+			if (clip != null) {
+				new Thread() {
+					public void run() {
+						synchronized (clip) {
+							clip.stop();
+							clip.setFramePosition(0);
+							clip.start();
+						}
+					}
+				}.start();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void stop(){
+		if(clip == null) return;
+		clip.stop();
+	}
+	
+	public void loop() {
+		try {
+			if (clip != null) {
+				new Thread() {
+					public void run() {
+						synchronized (clip) {
+							clip.stop();
+							clip.setFramePosition(0);
+							clip.loop(Clip.LOOP_CONTINUOUSLY);
+						}
+					}
+				}.start();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public boolean isActive(){
+		return clip.isActive();
+	}private Clip clip;
+	
+	// Change file name to match yours, of course
+	public static Sound sound1 = new Sound1("/sound1.wav");
+	public static Sound sound2 = new Sound1("/sound2.wav");
+	public static Sound sound3 = new Sound1("/sound3.wav");
+	
+	public Sound (String fileName) {
+		try {
+			AudioInputStream ais = AudioSystem.getAudioInputStream(Sound1.class.getResource(fileName));
+			clip = AudioSystem.getClip();
+			clip.open(ais);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void play() {
+		try {
+			if (clip != null) {
+				new Thread() {
+					public void run() {
+						synchronized (clip) {
+							clip.stop();
+							clip.setFramePosition(0);
+							clip.start();
+						}
+					}
+				}.start();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void stop(){
+		if(clip == null) return;
+		clip.stop();
+	}
+	
+	public void loop() {
+		try {
+			if (clip != null) {
+				new Thread() {
+					public void run() {
+						synchronized (clip) {
+							clip.stop();
+							clip.setFramePosition(0);
+							clip.loop(Clip.LOOP_CONTINUOUSLY);
+						}
+					}
+				}.start();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public boolean isActive(){
+		return clip.isActive();
+	}
+}

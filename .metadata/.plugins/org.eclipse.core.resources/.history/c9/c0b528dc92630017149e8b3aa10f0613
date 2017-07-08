@@ -1,0 +1,97 @@
+package escapeRoom;
+
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SpringLayout;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
+/**
+ * @author Mr_El
+ * Commit only the classes and metadata to the github!!!
+ */
+
+public class Game {
+
+	private JFrame frame;
+	
+	Player player = new Player(this);
+	//ClassRoom background = new ClassRoom();
+	
+	
+	public void paint(Graphics g) {
+		//super.paint(g);
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, //turns on anitialising
+				RenderingHints.VALUE_ANTIALIAS_ON);
+		player.paint(g2d);
+		//background.paint(g2d);
+		g.drawImage("matrix2.gif", 0, 0, null);
+	}
+	
+	
+		
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Escape Room");
+		
+		frame.setSize(800, 600); //Standard window size
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblClassroomEscape = new JLabel("ClassRoom Escape");
+		lblClassroomEscape.setFont(new Font("Tele-Marines", Font.BOLD | Font.ITALIC, 26));
+		lblClassroomEscape.setBounds(173, 152, 437, 91);
+		frame.getContentPane().add(lblClassroomEscape);
+		
+		JButton btnPlay = new JButton("Play");
+		btnPlay.setBounds(540, 367, 97, 25);
+		frame.getContentPane().add(btnPlay);
+		
+		JButton btnOptions = new JButton("Options");
+		btnOptions.setBounds(114, 367, 97, 25);
+		frame.getContentPane().add(btnOptions);
+		
+		JButton btnExit = new JButton("Exit");
+		btnExit.setBounds(404, 450, 97, 25);
+		frame.getContentPane().add(btnExit);
+		
+		JButton btnCredits = new JButton("Credits");
+		btnCredits.setBounds(219, 450, 97, 25);
+		frame.getContentPane().add(btnCredits);
+		
+		JLabel lblBackground = new JLabel("Background");
+		lblBackground.setIcon(new ImageIcon(Game.class.getResource("/escapeRoom/ChemistryRoom-01.jpg")));
+		lblBackground.setBounds(0, 0, 782, 553);
+		frame.getContentPane().add(lblBackground);
+		
+		Sound1.sound1.play1();
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Game() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

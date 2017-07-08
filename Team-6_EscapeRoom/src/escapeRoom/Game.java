@@ -2,16 +2,18 @@ package escapeRoom;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.RenderingHints;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.SpringLayout;
 import java.awt.Color;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
 
 /**
  * @author Mr_El
@@ -23,8 +25,9 @@ public class Game {
 	private JFrame frame;
 	
 	Player player = new Player(this);
+
+	private Image img;
 	//ClassRoom background = new ClassRoom();
-	
 	
 	public void paint(Graphics g) {
 		//super.paint(g);
@@ -33,6 +36,7 @@ public class Game {
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		player.paint(g2d);
 		//background.paint(g2d);
+		g.drawImage(img , 0, 0, null);
 	}
 	
 	
@@ -42,69 +46,73 @@ public class Game {
 	 */
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Escape Room");
-		frame.getContentPane().setBackground(Color.GREEN);
+		
 		frame.setSize(800, 600); //Standard window size
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		SpringLayout springLayout = new SpringLayout();
-		frame.getContentPane().setLayout(springLayout);
+		frame.getContentPane().setLayout(null);
 		
-		JLabel lblClassroomEscape = new JLabel("Classroom Escape");
-		springLayout.putConstraint(SpringLayout.NORTH, lblClassroomEscape, 178, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, lblClassroomEscape, 152, SpringLayout.WEST, frame.getContentPane());
-		lblClassroomEscape.setFont(new Font("Tele-Marines", Font.BOLD, 26));
+		JLabel lblClassroomEscape = new JLabel("ClassRoom Escape");
+		lblClassroomEscape.setForeground(new Color(255, 255, 255));
+		lblClassroomEscape.setBackground(new Color(0, 255, 0));
+		lblClassroomEscape.setFont(new Font("Tele-Marines", Font.BOLD | Font.ITALIC, 26));
+		lblClassroomEscape.setBounds(173, 152, 437, 91);
 		frame.getContentPane().add(lblClassroomEscape);
 		
-		JButton btnOptions = new JButton("Options");
-		springLayout.putConstraint(SpringLayout.WEST, btnOptions, 89, SpringLayout.WEST, frame.getContentPane());
-		btnOptions.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnOptions.setFont(new Font("Stencil", Font.PLAIN, 17));
-		frame.getContentPane().add(btnOptions);
-		
 		JButton btnPlay = new JButton("Play");
-		springLayout.putConstraint(SpringLayout.NORTH, btnOptions, 0, SpringLayout.NORTH, btnPlay);
-		springLayout.putConstraint(SpringLayout.SOUTH, btnPlay, -159, SpringLayout.SOUTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, btnPlay, -162, SpringLayout.EAST, frame.getContentPane());
-		btnPlay.setFont(new Font("Stencil", Font.PLAIN, 17));
+		btnPlay.setBounds(540, 367, 97, 25);
 		frame.getContentPane().add(btnPlay);
 		
-		JButton btnQuit = new JButton("Quit");
-		btnQuit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
-		springLayout.putConstraint(SpringLayout.SOUTH, btnQuit, -85, SpringLayout.SOUTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, btnQuit, -310, SpringLayout.EAST, frame.getContentPane());
-		frame.getContentPane().add(btnQuit);
+		JButton btnOptions = new JButton("Options");
+		btnOptions.setBounds(114, 367, 97, 25);
+		frame.getContentPane().add(btnOptions);
+		
+		JButton btnExit = new JButton("Exit");
+		btnExit.setBounds(404, 450, 97, 25);
+		frame.getContentPane().add(btnExit);
 		
 		JButton btnCredits = new JButton("Credits");
-		springLayout.putConstraint(SpringLayout.NORTH, btnCredits, 0, SpringLayout.NORTH, btnQuit);
-		springLayout.putConstraint(SpringLayout.EAST, btnCredits, -104, SpringLayout.WEST, btnQuit);
+		btnCredits.setBounds(219, 450, 97, 25);
 		frame.getContentPane().add(btnCredits);
 		
-		//Links windows together
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(46, 139, 87));
+		panel.setBounds(173, 153, 437, 91);
+		frame.getContentPane().add(panel);
+		
+		JLabel lblBackground = new JLabel();
+		lblBackground.setIcon(new ImageIcon(Game.class.getResource("/escapeRoom/Chemestry-Escape Room.png")));
+		lblBackground.setBounds(0, 0, 782, 553);
+		frame.getContentPane().add(lblBackground);
+		lblBackground.revalidate();
+		lblBackground.repaint();
+		
+		Sound1.sound1.play1(); //plays the music
+		
+		//Performs actions on buttons
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new ChemistryRoom().setVisible(true);
-				new ChemistryRoom().setSize(800, 600);
-				frame.setVisible(false);
-			}
+				Sound1.sound1.stop1();
+				frame.setVisible(false);			
+			}	
 		});
 		
-		btnOptions.addActionListener(new ActionListener() {
+		btnOptions.addActionListener(new ActionListener () {
 			public void actionPerformed(ActionEvent e) {
 				new Options().setVisible(true);
-				frame.setVisible(false);
 			}
 		});
 		
 		btnCredits.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Credits().setVisible(true);
+			}
+		});
+		
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
 			}
 		});
 	}

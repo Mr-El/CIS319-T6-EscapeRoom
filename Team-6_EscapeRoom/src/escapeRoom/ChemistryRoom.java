@@ -134,7 +134,7 @@ public class ChemistryRoom extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Image");
 		lblNewLabel.setBounds(0, 0, 955, 576);
-		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/ChemistryRoom-01.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/escapeRoom/Chemestry-Escape Room.png")));
 		contentPane.add(lblNewLabel);
 	}
 }
