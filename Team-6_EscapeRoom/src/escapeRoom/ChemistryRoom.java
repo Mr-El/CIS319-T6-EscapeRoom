@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JToolBar;
@@ -36,7 +37,7 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
-		JFrame frame1 = new Toolbar();
+		JFrame frame1 = new Items();
 		frame1.setVisible(true);
 	}
 
@@ -64,7 +65,7 @@ public class ChemistryRoom extends JFrame {
 		btn2Door.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new ChemistryDoor().setVisible(true);
-				dispose();
+				contentPane.setVisible(false);
 			}
 		});
 		
@@ -117,6 +118,12 @@ public class ChemistryRoom extends JFrame {
 		toolBar.add(btnBook_1);
 		btnBook_1.setVisible(false);
 		
+		btnBook_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new Book().setVisible(true);
+			}
+		});
+		
 		JButton btnToolFlask = new JButton("Flask");
 		btnToolFlask.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -129,7 +136,10 @@ public class ChemistryRoom extends JFrame {
 		
 		btnBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Book().setVisible(true);
+				JOptionPane.showMessageDialog(contentPane,
+						"By the cover, it seems this is a textbook for chemistry. Maybe it contains the answers to getting out of this room.",
+						"Chemistry Textbook",
+						JOptionPane.INFORMATION_MESSAGE);
 				btnBook.setVisible(false);
 				btnBook_1.setVisible(true);
 			}

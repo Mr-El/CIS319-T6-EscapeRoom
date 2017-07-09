@@ -14,6 +14,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
+import javax.swing.JToggleButton;
 
 /**
  * @author Mr_El
@@ -75,6 +76,16 @@ public class Game {
 		btnCredits.setBounds(219, 450, 97, 25);
 		frame.getContentPane().add(btnCredits);
 		
+
+		JButton btnMusicOnoff = new JButton("Music Off");
+		btnMusicOnoff.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Sound1.sound1.stop1();
+			}
+		});
+		btnMusicOnoff.setBounds(303, 367, 124, 25);
+		frame.getContentPane().add(btnMusicOnoff);
+		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(46, 139, 87));
 		panel.setBounds(173, 153, 437, 91);
@@ -93,7 +104,6 @@ public class Game {
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new ChemistryRoom().setVisible(true);
-				Sound1.sound1.stop1();
 				frame.setVisible(false);			
 			}	
 		});

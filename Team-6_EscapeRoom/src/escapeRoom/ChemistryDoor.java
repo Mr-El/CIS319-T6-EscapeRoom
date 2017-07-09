@@ -22,7 +22,6 @@ public class ChemistryDoor extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		JFrame frame = new JFrame();
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -58,20 +57,24 @@ public class ChemistryDoor extends JFrame {
 		btnDoor.setContentAreaFilled(false);
 		btnDoor.setBorderPainted(false);
 		
-		JButton btnBack = new JButton("<- Back");
-		btnBack.setBounds(5, 5, 59, 25);
+		JButton btnBack = new JButton("");
+		btnBack.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/back.png")));
+		btnBack.setBounds(0, 0, 94, 64);
 		contentPane.add(btnBack);
+		btnBack.setOpaque(false);
+		btnBack.setBorderPainted(false);
+		btnBack.setContentAreaFilled(false);
 		
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new ChemistryRoom().setVisible(true);
-				dispose();
+				contentPane.setVisible(false);
 			}
 		});
 		
 		JButton btnJug = new JButton();
-		btnJug.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/waterjug.png")));
-		btnJug.setBounds(136, 432, 99, 87);
+		btnJug.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/waterjug1.png")));
+		btnJug.setBounds(219, 409, 85, 87);
 		btnJug.setOpaque(false);
 		btnJug.setContentAreaFilled(false);
 		btnJug.setBorderPainted(false);
@@ -80,9 +83,17 @@ public class ChemistryDoor extends JFrame {
 		JButton btnPaper = new JButton();
 		btnPaper.setContentAreaFilled(false);
 		btnPaper.setBorderPainted(false);
-		btnPaper.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/paper.png")));
-		btnPaper.setBounds(547, 469, 99, 50);
+		btnPaper.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/paper1.png")));
+		btnPaper.setBounds(513, 469, 99, 50);
 		contentPane.add(btnPaper);
+		
+		JButton btnKey = new JButton();
+		btnKey.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/key.png")));
+		btnKey.setBounds(32, 469, 67, 50);
+		contentPane.add(btnKey);
+		btnKey.setOpaque(false);
+		btnKey.setBorderPainted(false);
+		
 		
 		JToolBar toolBar = new JToolBar("Items");
 		toolBar.setBackground(Color.RED);
@@ -97,11 +108,28 @@ public class ChemistryDoor extends JFrame {
 		JButton btnCheatSheet = new JButton("Cheat Sheet");
 		btnCheatSheet.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/paper.png")));
 		toolBar.add(btnCheatSheet);
+		
+		JButton btnKey_1 = new JButton("Key");
+		btnKey_1.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/key.png")));
+		toolBar.add(btnKey_1);
+		btnKey_1.setVisible(false);
 		btnCheatSheet.setVisible(false);
 		
+		btnKey.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				btnKey.setVisible(false);
+				JOptionPane.showMessageDialog(contentPane,
+						"This key looks like it unlocks something you need.",
+						"Key",
+						JOptionPane.INFORMATION_MESSAGE);
+				btnKey_1.setVisible(true);
+			}
+		});
+		btnKey.setContentAreaFilled(false);
+		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(0, 0, 775, 522);
-		lblNewLabel.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/door.jpg")));
+		lblNewLabel.setBounds(0, 0, 782, 562);
+		lblNewLabel.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/door-01.png")));
 		contentPane.add(lblNewLabel);
 		
 		btnPaper.addActionListener(new ActionListener() {
