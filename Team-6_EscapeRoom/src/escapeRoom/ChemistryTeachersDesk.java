@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -99,6 +100,10 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnFlask.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnFlask.setVisible(false);
+				JOptionPane.showMessageDialog(contentPane,
+						"It's a Flask of Hyrdrogen, still cold and liquified. Maybe you can combine this with something.",
+					    "Flask of Hydrogen",
+						JOptionPane.INFORMATION_MESSAGE);
 				btnHydrogen.setVisible(true);
 			}
 		});
