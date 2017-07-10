@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package escapeRoom;
+
+import javax.swing.*;
+
+/**
+ * @author Mr_El
+ *
+ */
+public class Toolbar extends JFrame {	
+}
