@@ -13,8 +13,6 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
-import javax.swing.border.LineBorder;
-import javax.swing.JToggleButton;
 
 /**
  * @author Mr_El
@@ -24,8 +22,6 @@ import javax.swing.JToggleButton;
 public class Game {
 
 	private JFrame frame;
-	
-	Player player = new Player(this);
 
 	private Image img;
 	//ClassRoom background = new ClassRoom();
@@ -35,8 +31,6 @@ public class Game {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, //turns on anitialising
 				RenderingHints.VALUE_ANTIALIAS_ON);
-		player.paint(g2d);
-		//background.paint(g2d);
 		g.drawImage(img , 0, 0, null);
 	}
 	

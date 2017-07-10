@@ -45,7 +45,7 @@ public class ChemistryTeachersDesk extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnPeriodicTable = new JButton("Periodic Table");
+		JButton btnPeriodicTable = new JButton();
 		btnPeriodicTable.setOpaque(false);
 		btnPeriodicTable.setContentAreaFilled(false);
 		btnPeriodicTable.setBorderPainted(false);
@@ -57,23 +57,28 @@ public class ChemistryTeachersDesk extends JFrame {
 			}
 		});
 		
-		JButton btnBack = new JButton("<- Back");
+		JButton btnBack = new JButton("");
+		btnBack.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/back.png")));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				new ChemistryRoom().setVisible(true);
 				dispose(); //closes the previous window saving memory
 			}
 		});
-		btnBack.setBounds(0, 0, 97, 25);
+		btnBack.setBounds(-18, 0, 109, 54);
 		contentPane.add(btnBack);
 		btnPeriodicTable.setBounds(77, 24, 293, 293);
 		contentPane.add(btnPeriodicTable);
+		btnBack.setContentAreaFilled(false);
+		btnBack.setBorderPainted(false);
 		
-		JButton btnFlask = new JButton("");
+		JButton btnFlask = new JButton();
 		btnFlask.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_blue.png")));
 		btnFlask.setBounds(607, 351, 141, 103);
 		contentPane.add(btnFlask);
 		btnFlask.setOpaque(false);
+		btnFlask.setContentAreaFilled(false);
+		btnFlask.setBorderPainted(false);
 		
 		JToolBar toolBar = new JToolBar();
 		toolBar.setBackground(Color.RED);
