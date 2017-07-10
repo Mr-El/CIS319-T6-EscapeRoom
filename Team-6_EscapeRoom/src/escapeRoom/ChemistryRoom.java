@@ -47,6 +47,7 @@ public class ChemistryRoom extends JFrame {
 	public ChemistryRoom() {
 		@SuppressWarnings("unused")
 		JFrame frame = new JFrame();
+		Items items = new Items();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 631);
 		contentPane = new JPanel();
@@ -97,13 +98,14 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
-		JButton btnBook = new JButton();
-		btnBook.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/textbook.png")));
-		//btnBook.setOpaque(false);
-		btnBook.setContentAreaFilled(false);
-		btnBook.setBorderPainted(false);
-		btnBook.setBounds(505, 258, 87, 65);
-		contentPane.add(btnBook);
+		if(items.bookpickup == false)
+		{
+			contentPane.add(Items.btnBook());
+		}
+		
+		if (items.gflaskpickup == false) {
+			contentPane.add(Items.btnGreenFlask());
+		}
 		
 		JToolBar toolBar = new JToolBar("Items");
 		toolBar.setBackground(Color.RED);
@@ -134,30 +136,9 @@ public class ChemistryRoom extends JFrame {
 		btnToolFlask.setVisible(false);
 		btnToolFlask.setOpaque(false);
 		
-		btnBook.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(contentPane,
-						"By the cover, it seems this is a textbook for chemistry. Maybe it contains the answers to getting out of this room.",
-						"Chemistry Textbook",
-						JOptionPane.INFORMATION_MESSAGE);
-				btnBook.setVisible(false);
-				btnBook_1.setVisible(true);
-			}
-		});
 		
-		JButton btnFlask = new JButton();
-		btnFlask.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				btnFlask.setVisible(false);
-				btnToolFlask.setVisible(true);
-			}
-		});
 		
-		btnFlask.setContentAreaFilled(false);
-		btnFlask.setBorderPainted(false);
-		btnFlask.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/flask.png")));
-		btnFlask.setBounds(265, 265, 58, 58);
-		contentPane.add(btnFlask);
+		
 		
 		
 		
