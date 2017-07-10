@@ -1747,12 +1747,17 @@ EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 !SESSION 2017-07-10 16:15:16.369 -----------------------------------------------
 eclipse.buildId=4.6.3.M20170301-0400
 =======
 !SESSION 2017-07-10 13:52:02.733 -----------------------------------------------
 eclipse.buildId=4.6.2.M20161124-1400
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+!SESSION 2017-07-10 13:52:02.733 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 !SESSION 2017-07-10 13:52:02.733 -----------------------------------------------
 eclipse.buildId=4.6.2.M20161124-1400
@@ -1765,10 +1770,14 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.e
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-10 16:15:39.588
 =======
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-10 13:53:31.184
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-10 13:53:31.184
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-10 13:53:31.184
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
@@ -1804,10 +1813,14 @@ java.lang.NullPointerException
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:706)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1324)
 =======
 	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1317)
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1317)
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1317)
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
@@ -1920,6 +1933,7 @@ java.lang.NullPointerException
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.ui 4 4 2017-07-10 16:15:39.604
 !MESSAGE Unable to create part
 !SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2017-07-10 16:15:39.604
@@ -1928,6 +1942,11 @@ java.lang.NullPointerException
 !MESSAGE Unable to create part
 !SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2017-07-10 13:53:31.212
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+!ENTRY org.eclipse.ui 4 4 2017-07-10 13:53:31.212
+!MESSAGE Unable to create part
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2017-07-10 13:53:31.212
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 !ENTRY org.eclipse.ui 4 4 2017-07-10 13:53:31.212
 !MESSAGE Unable to create part
@@ -1979,10 +1998,14 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/Team-6_Escape
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:706)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1324)
 =======
 	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1317)
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1317)
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1317)
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
@@ -2094,6 +2117,7 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/Team-6_Escape
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 !SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2017-07-10 16:15:39.604
 !MESSAGE Cannot determine URI for '/Team-6_EscapeRoom/src/escapeRoom/ChemistryTeachersDesk.java'.
 
@@ -2101,6 +2125,8 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/Team-6_Escape
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'H:\'. If this is
 =======
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 !SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2017-07-10 13:53:31.218
@@ -2232,7 +2258,10 @@ java.lang.ClassCastException: org.eclipse.ui.internal.ErrorEditorPart cannot be 
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\Mr_El'. If this is
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
@@ -2241,8 +2270,11 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.e4.ui.workbench 4 2 2017-07-10 16:16:21.873
 =======
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-10 13:53:49.871
@@ -2439,7 +2471,10 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/Team-6_Escape
 
 !ENTRY org.eclipse.e4.ui.workbench 4 2 2017-07-10 13:53:49.965
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench".
@@ -2489,9 +2524,12 @@ java.lang.ClassCastException: org.eclipse.ui.internal.ErrorEditorPart cannot be 
 	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.setFocus(ContributedPartRenderer.java:102)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$6.mouseUp(StackRenderer.java:1151)
 	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:221)
 =======
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:332)
@@ -2528,7 +2566,10 @@ java.lang.ClassCastException: org.eclipse.ui.internal.ErrorEditorPart cannot be 
 	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1930)
 	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:338)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
@@ -2560,10 +2601,14 @@ java.lang.ClassCastException: org.eclipse.ui.internal.ErrorEditorPart cannot be 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-10 16:16:21.904
 =======
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-10 13:53:49.971
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-10 13:53:49.971
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-10 13:53:49.971
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
@@ -2614,9 +2659,12 @@ java.lang.ClassCastException: org.eclipse.ui.internal.ErrorEditorPart cannot be 
 	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.setFocus(ContributedPartRenderer.java:102)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$6.mouseUp(StackRenderer.java:1151)
 	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:221)
 =======
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:332)
@@ -2653,7 +2701,10 @@ java.lang.ClassCastException: org.eclipse.ui.internal.ErrorEditorPart cannot be 
 	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1930)
 	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:338)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
@@ -2683,7 +2734,10 @@ java.lang.ClassCastException: org.eclipse.ui.internal.ErrorEditorPart cannot be 
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 !SESSION 2017-07-10 16:11:48.310 -----------------------------------------------
 eclipse.buildId=4.6.2.M20161124-1400
 java.version=1.8.0_131
@@ -2854,4 +2908,7 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+<<<<<<< HEAD
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
+=======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f

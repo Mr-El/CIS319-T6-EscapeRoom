@@ -9,7 +9,10 @@ INDEX VERSION 1.129+C:\Users\Mr_El\Documents\GitHub\CIS319-T6-EscapeRoom\.metada
 4069650667.index
 194259052.index
 <<<<<<< HEAD
+<<<<<<< HEAD
 3141958188.index
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 848469205.index
@@ -33,6 +36,9 @@ INDEX VERSION 1.129+C:\Users\Mr_El\Documents\GitHub\CIS319-T6-EscapeRoom\.metada
 559129880.index
 4265864773.index
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4e20aaa9b03366a8787b72e442918acf7a33c1fd
+=======
+>>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
 =======
 >>>>>>> d8ed70124e5f41dbbb29017c5786ea2f299a617f
