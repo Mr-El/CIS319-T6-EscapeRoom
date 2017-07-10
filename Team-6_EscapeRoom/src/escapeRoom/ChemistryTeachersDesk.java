@@ -17,7 +17,7 @@ import java.awt.Color;
 @SuppressWarnings("serial")
 public class ChemistryTeachersDesk extends JFrame {
 
-	private JPanel contentPane;
+	public JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -40,11 +40,13 @@ public class ChemistryTeachersDesk extends JFrame {
 	 */
 	public ChemistryTeachersDesk() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Items items = new Items();
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		Toolbar.bar();
 		
 		JButton btnPeriodicTable = new JButton();
 		btnPeriodicTable.setOpaque(false);
@@ -73,39 +75,17 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnBack.setContentAreaFilled(false);
 		btnBack.setBorderPainted(false);
 		
-		JButton btnFlask = new JButton();
-		btnFlask.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_blue.png")));
-		btnFlask.setBounds(607, 351, 141, 103);
-		contentPane.add(btnFlask);
-		btnFlask.setOpaque(false);
-		btnFlask.setContentAreaFilled(false);
-		btnFlask.setBorderPainted(false);
 		
-		JToolBar toolBar = new JToolBar();
-		toolBar.setBackground(Color.RED);
-		toolBar.setBounds(0, 504, 770, 49);
-		contentPane.add(toolBar);
+		if(items.flaskpickup == false)
+		{
+			contentPane.add(Items.btnFlask());
+		}
 		
-		JButton btnHydrogen = new JButton("Hydrogen");
-		btnHydrogen.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_small.png")));
-		toolBar.add(btnHydrogen);
-		btnHydrogen.setVisible(false);
 		
-		JLabel lblPicture = new JLabel("picture");
+		JLabel lblPicture = new JLabel("");
 		lblPicture.setBounds(0, 0, 800, 600);
-		lblPicture.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/periodicTable.jpg")));
+		lblPicture.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/TeachersDesk-01.png")));
 		contentPane.add(lblPicture);
 		
-		
-		btnFlask.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				btnFlask.setVisible(false);
-				JOptionPane.showMessageDialog(contentPane,
-						"It's a Flask of Hyrdrogen, still cold and liquified. Maybe you can combine this with something.",
-					    "Flask of Hydrogen",
-						JOptionPane.INFORMATION_MESSAGE);
-				btnHydrogen.setVisible(true);
-			}
-		});
 	}
 }

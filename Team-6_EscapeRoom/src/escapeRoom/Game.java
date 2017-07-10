@@ -97,8 +97,8 @@ public class Game {
 		//Performs actions on buttons
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new ChemistryRoom().setVisible(true);
-				frame.setVisible(false);			
+				frame.dispose();
+				new ChemistryRoom().setVisible(true);	
 			}	
 		});
 		

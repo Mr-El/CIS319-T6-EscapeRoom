@@ -65,7 +65,7 @@ public class ChemistryRoom extends JFrame {
 		btn2Door.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new ChemistryDoor().setVisible(true);
-				contentPane.setVisible(false);
+				dispose();
 			}
 		});
 		

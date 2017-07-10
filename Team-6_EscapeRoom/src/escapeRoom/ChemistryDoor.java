@@ -44,6 +44,7 @@ public class ChemistryDoor extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		Items items = new Items();
 		
 		JButton btnDoor = new JButton();
 		btnDoor.addActionListener(new ActionListener() {
@@ -68,17 +69,17 @@ public class ChemistryDoor extends JFrame {
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new ChemistryRoom().setVisible(true);
-				contentPane.setVisible(false);
+				dispose();
 			}
 		});
 		
-		JButton btnJug = new JButton();
-		btnJug.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/waterjug1.png")));
-		btnJug.setBounds(219, 409, 85, 87);
-		btnJug.setOpaque(false);
-		btnJug.setContentAreaFilled(false);
-		btnJug.setBorderPainted(false);
-		contentPane.add(btnJug);
+		
+		//TODO items.java / toolbar.java 
+		
+		if(items.jugpickup == false)
+		{
+			contentPane.add(Items.btnJug());
+		}
 		
 		JButton btnPaper = new JButton();
 		btnPaper.setContentAreaFilled(false);
@@ -139,17 +140,6 @@ public class ChemistryDoor extends JFrame {
 						"Cheet Sheet",
 						JOptionPane.INFORMATION_MESSAGE);
 				btnCheatSheet.setVisible(true);
-			}
-		});
-		
-		btnJug.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				btnJug.setVisible(false);
-				JOptionPane.showMessageDialog(contentPane,
-						"This water is cold and fresh, maybe you should add it to something.",
-						"Jug of Water",
-						JOptionPane.INFORMATION_MESSAGE);
-				btnWaterJug.setVisible(true);
 			}
 		});
 		
