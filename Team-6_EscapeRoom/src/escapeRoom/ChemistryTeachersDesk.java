@@ -46,7 +46,13 @@ public class ChemistryTeachersDesk extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		Toolbar.bar();
+		//Toolbar.bar();
+		
+		//Regular Buttons
+		if(items.flaskpickup == false) {
+			contentPane.add(Items.btnFlask());
+		}
+		
 		
 		JButton btnPeriodicTable = new JButton();
 		btnPeriodicTable.setOpaque(false);
@@ -74,12 +80,6 @@ public class ChemistryTeachersDesk extends JFrame {
 		contentPane.add(btnPeriodicTable);
 		btnBack.setContentAreaFilled(false);
 		btnBack.setBorderPainted(false);
-		
-		
-		if(items.flaskpickup == false)
-		{
-			contentPane.add(Items.btnFlask());
-		}
 		
 		
 		JLabel lblPicture = new JLabel("");

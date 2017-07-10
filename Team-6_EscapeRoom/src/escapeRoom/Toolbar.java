@@ -1,15 +1,16 @@
 package escapeRoom;
 
 import java.awt.Color;
+import java.awt.Component;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JToolBar;
 
-public class Toolbar 
-{
+public class Toolbar {
 	
+	/* Matthew's Test Code
 	public static void bar()
 	{
 		JPanel panel = new JPanel();
@@ -25,5 +26,13 @@ public class Toolbar
 			toolBar.add(btnHydrogen);
 			btnHydrogen.setVisible(false);
 		}
+	}*/
+	
+	public static Component blueFlask() {
+		JButton btnHydrogen = new JButton("Hydrogen");
+		btnHydrogen.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_small.png")));
+		
+		return btnHydrogen;
+		
 	}
 }
