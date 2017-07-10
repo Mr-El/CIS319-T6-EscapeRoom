@@ -91,9 +91,9 @@ public class ChemistryTeachersDesk extends JFrame {
 		toolBar.add(btnHydrogen);
 		btnHydrogen.setVisible(false);
 		
-		JLabel lblPicture = new JLabel("picture");
+		JLabel lblPicture = new JLabel("");
 		lblPicture.setBounds(0, 0, 800, 600);
-		lblPicture.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/periodicTable.jpg")));
+		lblPicture.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/TeachersDesk-01.png")));
 		contentPane.add(lblPicture);
 		
 		
