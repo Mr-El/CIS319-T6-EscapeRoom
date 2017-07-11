@@ -57,7 +57,7 @@ public class PeriodicTable extends JFrame {
 		
 		JLabel lblImage = new JLabel("Image");
 		lblImage.setBounds(5, 5, 832, 612);
-		lblImage.setIcon(new ImageIcon(PeriodicTable.class.getResource("/escapeRoom/Periodic-Table-Color.png")));
+		lblImage.setIcon(new ImageIcon(PeriodicTable.class.getResource("/Images/Periodic-Table-Color.png")));
 		contentPane.add(lblImage);
 	}
 

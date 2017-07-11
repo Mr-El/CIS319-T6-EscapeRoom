@@ -41,7 +41,7 @@ public class ChemistryTeachersDesk extends JFrame {
 	public ChemistryTeachersDesk() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Items items = new Items();
-		setBounds(100, 100, 800, 600);
+		setBounds(100, 100, 800, 650);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -49,9 +49,11 @@ public class ChemistryTeachersDesk extends JFrame {
 		//Toolbar.bar();
 		
 		//Regular Buttons
-		if(items.flaskpickup == false) {
+		if(Items.flaskpickup == false) {
 			contentPane.add(Items.btnFlask());
 		}
+		
+		contentPane.add(Toolbar.bar());
 		
 		
 		JButton btnPeriodicTable = new JButton();
@@ -81,6 +83,48 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnBack.setContentAreaFilled(false);
 		btnBack.setBorderPainted(false);
 		
+		
+		/*if(items.flaskpickup == true) {
+			toolBar.add(Toolbar.blueFlask());
+		}*/
+		
+		JButton btnMonitor = new JButton("Monitor");
+		btnMonitor.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/desktop.png")));
+		btnMonitor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnMonitor.setVisible(false);
+			}
+		});
+		btnMonitor.setBounds(397, 336, 128, 69);
+		contentPane.add(btnMonitor);
+		btnMonitor.setVisible(true);
+		btnMonitor.setOpaque(false);
+		btnMonitor.setContentAreaFilled(false);
+		btnMonitor.setBorderPainted(false);
+		
+		JButton btnLocked = new JButton("");
+		btnLocked.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Sound1.sound2.play1(); //plays locked sound effect
+			}
+		});
+		btnLocked.setBounds(636, 477, 97, 54);
+		contentPane.add(btnLocked);
+		btnLocked.setOpaque(false);
+		btnLocked.setContentAreaFilled(false);
+		btnLocked.setBorderPainted(false);
+		
+		JButton btnChair = new JButton("");
+		btnChair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Sound1.sound3.play1();
+			}
+		});
+		btnChair.setBounds(68, 381, 191, 173);
+		contentPane.add(btnChair);
+		btnChair.setOpaque(false);
+		btnChair.setContentAreaFilled(false);
+		btnChair.setBorderPainted(false);
 		
 		JLabel lblPicture = new JLabel("");
 		lblPicture.setBounds(0, 0, 800, 600);

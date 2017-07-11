@@ -9,30 +9,31 @@ import javax.swing.JPanel;
 import javax.swing.JToolBar;
 
 public class Toolbar {
-	
-	/* Matthew's Test Code
-	public static void bar()
+
+	public static Component bar()
 	{
 		JPanel panel = new JPanel();
 		JToolBar toolBar = new JToolBar();
 		toolBar.setBackground(Color.RED);
-		toolBar.setBounds(0, 504, 770, 49);
+		toolBar.setBounds(0, 553, 782, 50);
 		panel.add(toolBar);
 	
-		if(Items.flaskpickup == true)
+		/*if(Items.flaskpickup == true)
 		{
 			JButton btnHydrogen = new JButton("Hydrogen");
 			btnHydrogen.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_small.png")));
+			btnHydrogen.setVisible(true);
 			toolBar.add(btnHydrogen);
-			btnHydrogen.setVisible(false);
-		}
-	}*/
+			return btnHydrogen;
+		}*/
+		return toolBar;
+	}
 	
-	public static Component blueFlask() {
+	/*public static Component blueFlask() {
 		JButton btnHydrogen = new JButton("Hydrogen");
 		btnHydrogen.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_small.png")));
 		
 		return btnHydrogen;
 		
-	}
+	}*/
 }

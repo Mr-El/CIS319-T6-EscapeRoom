@@ -3,6 +3,7 @@
  */
 package escapeRoom;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,6 +22,7 @@ public class Items extends JFrame {
 	static boolean gflaskpickup = false;
 	static boolean paperpickup = false;
 	static boolean keypickup = false;
+	static int test;
 	
 	public static Component btnFlask()
 	{
@@ -42,6 +44,7 @@ public class Items extends JFrame {
 					    "Flask of Hydrogen",
 						JOptionPane.INFORMATION_MESSAGE);
 				flaskpickup = true;
+				test = 1;
 			}
 		});
 		
@@ -120,7 +123,7 @@ public class Items extends JFrame {
 		btnPaper.setContentAreaFilled(false);
 		btnPaper.setBorderPainted(false);
 		btnPaper.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/paper1.png")));
-		btnPaper.setBounds(513, 469, 99, 50);
+		btnPaper.setBounds(513, 465, 99, 50);
 		
 		btnPaper.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

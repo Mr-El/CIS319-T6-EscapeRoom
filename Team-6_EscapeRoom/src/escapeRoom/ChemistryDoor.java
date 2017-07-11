@@ -11,6 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JToolBar;
 
 public class ChemistryDoor extends JFrame {
 
@@ -37,12 +38,14 @@ public class ChemistryDoor extends JFrame {
 	 */
 	public ChemistryDoor() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 600);
+		setBounds(100, 100, 800, 650);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		Items items = new Items();
+		
+		contentPane.add(Toolbar.bar()); //adds the toolbar
 		
 		if (items.jugpickup == false) {
 			contentPane.add(Items.btnJug());
@@ -66,7 +69,7 @@ public class ChemistryDoor extends JFrame {
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				new ChemistryRoom().setVisible(true);
-				contentPane.setVisible(false);
+				dispose();
 			}
 		});
 		
@@ -81,6 +84,18 @@ public class ChemistryDoor extends JFrame {
 				Sound1.sound2.play1();
 			}
 		});
+		
+		JButton btnKnock = new JButton("");
+		btnKnock.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Sound1.sound4.play1();
+			}
+		});
+		btnKnock.setBounds(431, 126, 110, 99);
+		contentPane.add(btnKnock);
+		btnKnock.setOpaque(false);
+		btnKnock.setContentAreaFilled(false);
+		btnKnock.setBorderPainted(false);
 		
 		JLabel lblBackground = new JLabel("");
 		lblBackground.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/door-01.png")));
