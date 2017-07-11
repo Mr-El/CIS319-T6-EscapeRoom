@@ -22,7 +22,7 @@ public class Items extends JFrame {
 	static boolean gflaskpickup = false;
 	static boolean paperpickup = false;
 	static boolean keypickup = false;
-	static int test;
+	static boolean lighterpickup = false;
 	
 	public static Component btnFlask()
 	{
@@ -44,7 +44,6 @@ public class Items extends JFrame {
 					    "Flask of Hydrogen",
 						JOptionPane.INFORMATION_MESSAGE);
 				flaskpickup = true;
-				test = 1;
 			}
 		});
 		
@@ -159,6 +158,23 @@ public class Items extends JFrame {
 		});
 		
 		return btnKey;
+	}
+	
+	public static Component btnLighter() {
+		JButton btnLighter = new JButton();
+		btnLighter.setIcon(new ImageIcon(ChemistryTeachersDrawer.class.getResource("/Images/lighter.png")));
+		btnLighter.setBounds(527, 397, 118, 61);
+		btnLighter.setOpaque(false);
+		btnLighter.setContentAreaFilled(false);
+		btnLighter.setBorderPainted(false);
+		btnLighter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnLighter.setVisible(false);
+				lighterpickup = true;
+			}
+		});
+		
+		return btnLighter;
 	}
 }
 
