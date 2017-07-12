@@ -26,15 +26,12 @@ public class Items extends JFrame {
 	
 	public static Component btnFlask()
 	{
-		
-		
 		JButton btnFlask = new JButton();
 		btnFlask.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_blue.png")));
 		btnFlask.setBounds(607, 351, 141, 103);
 		btnFlask.setOpaque(false);
 		btnFlask.setContentAreaFilled(false);
 		btnFlask.setBorderPainted(false);
-		
 		
 		btnFlask.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -44,10 +41,9 @@ public class Items extends JFrame {
 					    "Flask of Hydrogen",
 						JOptionPane.INFORMATION_MESSAGE);
 				flaskpickup = true;
+				Toolbar.bar();
 			}
 		});
-		
-		//Toolbar.bar();
 		return btnFlask;
 	}
 	

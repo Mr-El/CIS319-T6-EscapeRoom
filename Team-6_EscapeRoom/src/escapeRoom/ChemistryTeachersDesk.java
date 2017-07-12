@@ -41,12 +41,13 @@ public class ChemistryTeachersDesk extends JFrame {
 	public ChemistryTeachersDesk() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Items items = new Items();
+		Toolbar toolbar = new Toolbar();
 		setBounds(100, 100, 800, 650);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		//Toolbar.bar();
+		Toolbar.bar();
 		
 		//Regular Buttons
 		if(Items.flaskpickup == false) {
@@ -84,9 +85,9 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnBack.setBorderPainted(false);
 		
 		
-		/*if(items.flaskpickup == true) {
-			toolBar.add(Toolbar.blueFlask());
-		}*/
+		if(items.flaskpickup == true) {
+			Toolbar.bar();
+		}
 		
 		JButton btnMonitor = new JButton("Monitor");
 		btnMonitor.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/desktop.png")));
