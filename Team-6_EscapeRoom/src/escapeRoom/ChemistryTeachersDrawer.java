@@ -47,6 +47,10 @@ public class ChemistryTeachersDrawer extends JFrame {
 			contentPane.add(Items.btnLighter());
 		}
 		
+		if (Items.key2pickup == false) {
+			contentPane.add(Items.btnKey2());
+		}
+		
 		contentPane.add(Toolbar.bar());
 		
 		JButton btnBack = new JButton("");
@@ -62,6 +66,7 @@ public class ChemistryTeachersDrawer extends JFrame {
 		btnBack.setOpaque(false);
 		btnBack.setBorderPainted(false);
 		btnBack.setContentAreaFilled(false);
+		
 		
 		
 		

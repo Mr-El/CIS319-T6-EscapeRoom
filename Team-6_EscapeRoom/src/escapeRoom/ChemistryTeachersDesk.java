@@ -106,7 +106,14 @@ public class ChemistryTeachersDesk extends JFrame {
 		JButton btnLocked = new JButton("");
 		btnLocked.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Sound1.sound2.play1(); //plays locked sound effect
+				if (Items.keypickup == true) {
+					new ChemistryTeachersDrawer().setVisible(true);
+					dispose();
+				}
+				else {
+					Sound1.sound2.play1(); //plays locked sound effect
+				}
+				
 			}
 		});
 		btnLocked.setBounds(636, 477, 97, 54);

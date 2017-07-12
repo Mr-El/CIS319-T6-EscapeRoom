@@ -23,6 +23,7 @@ public class Items extends JFrame {
 	static boolean paperpickup = false;
 	static boolean keypickup = false;
 	static boolean lighterpickup = false;
+	static boolean key2pickup = false;
 	
 	public static Component btnFlask()
 	{
@@ -171,6 +172,22 @@ public class Items extends JFrame {
 		});
 		
 		return btnLighter;
+	}
+	
+	public static Component btnKey2() {
+		JButton btnKey = new JButton();
+		btnKey.setIcon(new ImageIcon(ChemistryTeachersDrawer.class.getResource("/Images/key.png")));
+		btnKey.setBounds(260, 87, 97, 25);
+		btnKey.setOpaque(false);
+		btnKey.setBorderPainted(false);
+		btnKey.setContentAreaFilled(false);
+		btnKey.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnKey.setVisible(false);
+				key2pickup = true;
+			}
+		});
+		return btnKey;
 	}
 }
 
