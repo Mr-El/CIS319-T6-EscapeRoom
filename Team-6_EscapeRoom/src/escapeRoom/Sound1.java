@@ -15,6 +15,8 @@ private Clip clip1;
 	// Change file name to match yours, of course
 	public static Sound1 sound1 = new Sound1("/escapeRoom/RLD_Installer_11.wav");
 	public static Sound1 sound2 = new Sound1("/escapeRoom/locked.wav");
+	public static Sound1 sound3 = new Sound1("/escapeRoom/chair.wav");
+	public static Sound1 sound4 = new Sound1("/escapeRoom/knock.wav");
 	
 	public Sound1(String filename) {
 		try {

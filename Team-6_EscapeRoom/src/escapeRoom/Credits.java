@@ -71,5 +71,25 @@ public class Credits extends JFrame {
 		JLabel lblCisGroup = new JLabel("CIS319 - Group 6");
 		lblCisGroup.setBounds(317, 2, 103, 16);
 		contentPane.add(lblCisGroup);
+		
+		JLabel lblBackgroundCoding = new JLabel("Background Coding:");
+		lblBackgroundCoding.setBounds(12, 141, 139, 16);
+		contentPane.add(lblBackgroundCoding);
+		
+		JLabel lblMatthewHahm = new JLabel("Matthew Hahm");
+		lblMatthewHahm.setBounds(266, 141, 91, 16);
+		contentPane.add(lblMatthewHahm);
+		
+		JLabel lblJaniceElliottbritton = new JLabel("Janice Elliott-Britton");
+		lblJaniceElliottbritton.setBounds(266, 224, 126, 16);
+		contentPane.add(lblJaniceElliottbritton);
+		
+		JLabel lblMusic = new JLabel("Music:");
+		lblMusic.setBounds(12, 184, 56, 16);
+		contentPane.add(lblMusic);
+		
+		JLabel lblReloadedInstaller = new JLabel("Reloaded Installer #11");
+		lblReloadedInstaller.setBounds(266, 184, 141, 16);
+		contentPane.add(lblReloadedInstaller);
 	}
 }
