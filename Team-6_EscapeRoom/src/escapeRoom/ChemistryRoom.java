@@ -1,24 +1,30 @@
 package escapeRoom;
 
 import java.awt.EventQueue;
-import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JToolBar;
 import java.awt.Color;
 
 public class ChemistryRoom extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-
+	
+	
+	
 	/**
 	 * Launch the application.
 	 */
@@ -39,6 +45,8 @@ public class ChemistryRoom extends JFrame {
 		
 		JFrame frame1 = new Items();
 		frame1.setVisible(true);
+		
+		
 	}
 
 	/**
@@ -54,6 +62,9 @@ public class ChemistryRoom extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		
+		//Rectangle toolbar experiment
 		
 		contentPane.add(Toolbar.bar()); //adds the toolbar class
 		
@@ -72,7 +83,7 @@ public class ChemistryRoom extends JFrame {
 		});
 		
 		JButton btnTeachersDesk = new JButton();
-		btnTeachersDesk.setBounds(645, 279, 169, 265);
+		btnTeachersDesk.setBounds(644, 286, 169, 265);
 		contentPane.add(btnTeachersDesk);
 		btnTeachersDesk.setOpaque(false);
 		btnTeachersDesk.setContentAreaFilled(false);
@@ -121,8 +132,9 @@ public class ChemistryRoom extends JFrame {
 		});
 		
 		JLabel lblNewLabel = new JLabel("Image");
-		lblNewLabel.setBounds(0, 0, 955, 576);
+		lblNewLabel.setBounds(0, 0, 938, 578);
 		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/Chemestry-Escape Room.png")));
 		contentPane.add(lblNewLabel);
 	}
+
 }

@@ -27,8 +27,8 @@ public class Toolbar {
 			btnHydrogen.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_small.png")));
 			//there was no setbounds so the program did not know where to put the button
 			//btnHydrogen.setBounds(100, 500, 50, 50);
-			//btnHydrogen.setContentAreaFilled(false);
-			//btnHydrogen.setBorderPainted(false);
+			btnHydrogen.setContentAreaFilled(false);
+			btnHydrogen.setBorderPainted(false);
 			btnHydrogen.setVisible(true);
 			btnHydrogen.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
