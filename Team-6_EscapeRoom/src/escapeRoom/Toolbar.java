@@ -33,7 +33,7 @@ public class Toolbar {
 		panel.add(toolBar);
 		
 		//TODO: Toolbar
-		if(Items.flaskpickup == true)
+		if(Items.flaskpickup == 1)
 		{
 			JButton btnHydrogen = new JButton("Hydrogen");
 			btnHydrogen.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_small.png")));

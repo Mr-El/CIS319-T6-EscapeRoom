@@ -117,12 +117,12 @@ public class ChemistryRoom extends JFrame {
 		});
 		
 		//if statement that spawn items and keep them despawned after pickup
-		if(items.bookpickup == false)
+		if(items.bookpickup == 0)
 		{
 			contentPane.add(Items.btnBook());
 		}
 		
-		if (items.gflaskpickup == false) {
+		if (items.gflaskpickup == 0) {
 			contentPane.add(Items.btnGreenFlask());
 		}
 		

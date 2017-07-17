@@ -58,7 +58,7 @@ public class ChemistryTeachersDesk extends JFrame {
 		Toolbar.bar();
 		
 		//Regular Buttons
-		if(Items.flaskpickup == false) {
+		if(Items.flaskpickup == 0) {
 			contentPane.add(Items.btnFlask());
 		}
 		
@@ -95,9 +95,8 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnBack.setBorderPainted(false);
 		
 		//toolbar update
-		if(Items.flaskpickup == true) {
-			Toolbar.bar();
-		}
+		Toolbar.bar();
+		
 		
 		//creates a button for the monitor
 		JButton btnMonitor = new JButton("Monitor");
@@ -118,7 +117,7 @@ public class ChemistryTeachersDesk extends JFrame {
 		JButton btnLocked = new JButton("");
 		btnLocked.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (Items.keypickup == true) {
+				if (Items.keypickup == 1) {
 					new ChemistryTeachersDrawer().setVisible(true);
 					dispose();
 				}

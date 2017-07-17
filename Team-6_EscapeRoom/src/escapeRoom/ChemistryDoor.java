@@ -58,15 +58,15 @@ public class ChemistryDoor extends JFrame {
 		contentPane.add(Toolbar.bar()); //adds the toolbar
 		
 		//if statments that spawn the items
-		if (items.jugpickup == false) {
+		if (items.jugpickup == 0) {
 			contentPane.add(Items.btnJug());
 		}
 		
-		if (items.paperpickup == false) {
+		if (items.paperpickup == 0) {
 			contentPane.add(Items.Paper());
 		}
 
-		if (items.keypickup == false) {
+		if (items.keypickup == 0) {
 			contentPane.add(Items.btnKey());
 		}
 		
@@ -94,10 +94,18 @@ public class ChemistryDoor extends JFrame {
 		btnBack.setOpaque(false);
 		btnLock.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Sound1.sound2.play1();
+				if (items.allitems == 8) {
+					new Hallway().setVisible(true);
+					dispose();
+				}
+				
+				else {
+					Sound1.sound2.play1();
+				}
 			}
 		});
-		//allows the player to attempt opening the door
+		
+		//if player touches the glass of the door, a knocking sound will play
 		JButton btnKnock = new JButton("");
 		btnKnock.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

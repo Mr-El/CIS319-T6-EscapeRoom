@@ -28,14 +28,16 @@ public class Items extends JFrame {
 	Toolbar toolbar = new Toolbar();
 	
 	//sets all the item pickups to false so the inventory starts empty and the items spawn
-	static boolean flaskpickup = false;
-	static boolean jugpickup = false;
-	static boolean bookpickup = false;
-	static boolean gflaskpickup = false;
-	static boolean paperpickup = false;
-	static boolean keypickup = false;
-	static boolean lighterpickup = false;
-	static boolean key2pickup = false;
+	static int flaskpickup = 0;
+	static int jugpickup = 0;
+	static int bookpickup = 0;
+	static int gflaskpickup = 0;
+	static int paperpickup = 0;
+	static int keypickup = 0;
+	static int lighterpickup = 0;
+	static int key2pickup = 0;
+	
+	int allitems = flaskpickup + jugpickup + bookpickup + gflaskpickup + paperpickup + keypickup + lighterpickup + key2pickup;
 	
 	//method for item Hydrogen Flask
 	public static Component btnFlask()
@@ -56,7 +58,7 @@ public class Items extends JFrame {
 					    "Flask of Hydrogen",
 						JOptionPane.INFORMATION_MESSAGE);
 				//pickup is now set to true so the item will no longer spawn
-				flaskpickup = true;
+				flaskpickup = 1;
 				Toolbar.bar();
 			}
 		});
@@ -83,7 +85,7 @@ public class Items extends JFrame {
 						"Jug of Water",
 						JOptionPane.INFORMATION_MESSAGE);
 				//pickup is now set to true so the item will no longer spawn
-				jugpickup = true;
+				jugpickup = 1;
 			}
 		});
 		
@@ -107,7 +109,7 @@ public class Items extends JFrame {
 						"Chemistry Textbook",
 						JOptionPane.INFORMATION_MESSAGE);
 				//pickup is now set to true so the item will no longer spawn
-				bookpickup = true;
+				bookpickup = 1;
 			}
 		});
 		
@@ -128,7 +130,7 @@ public class Items extends JFrame {
 				btngFlask.setVisible(false);
 				//btnToolFlask.setVisible(true);
 				//pickup is now set to true so the item will no longer spawn
-				gflaskpickup = true;
+				gflaskpickup = 1;
 			}
 		});
 		
@@ -152,7 +154,7 @@ public class Items extends JFrame {
 						"Cheet Sheet",
 						JOptionPane.INFORMATION_MESSAGE);
 				//pickup is now set to true so the item will no longer spawn
-				paperpickup = true;
+				paperpickup = 1;
 				
 			}
 		});
@@ -178,7 +180,7 @@ public class Items extends JFrame {
 						JOptionPane.INFORMATION_MESSAGE);
 				//btnKey_1.setVisible(true);
 				//pickup is now set to true so the item will no longer spawn
-				keypickup = true;
+				keypickup = 1;
 			}
 		});
 		
@@ -197,7 +199,7 @@ public class Items extends JFrame {
 		btnLighter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnLighter.setVisible(false);
-				lighterpickup = true;
+				lighterpickup = 1;
 			}
 		});
 		
@@ -217,7 +219,7 @@ public class Items extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				btnKey.setVisible(false);
 				//pickup is now set to true so the item will no longer spawn
-				key2pickup = true;
+				key2pickup = 1;
 			}
 		});
 		return btnKey;

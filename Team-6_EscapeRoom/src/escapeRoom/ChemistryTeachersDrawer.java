@@ -53,11 +53,11 @@ public class ChemistryTeachersDrawer extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		if (Items.lighterpickup == false) {
+		if (Items.lighterpickup == 0) {
 			contentPane.add(Items.btnLighter());
 		}
 		
-		if (Items.key2pickup == false) {
+		if (Items.key2pickup == 0) {
 			contentPane.add(Items.btnKey2());
 		}
 		
