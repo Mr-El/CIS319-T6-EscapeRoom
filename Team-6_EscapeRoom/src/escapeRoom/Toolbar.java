@@ -1,5 +1,16 @@
 package escapeRoom;
 
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        * 
+ ** * * * * * * * * * * * */
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;

@@ -1,9 +1,17 @@
-/**
- * 
- */
+
 package escapeRoom;
 
-import java.awt.Color;
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        *
+ ** * * * * * * * * * * * */
+
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +23,10 @@ import javax.swing.*;
  *
  */
 public class Items extends JFrame {	
+	private static final long serialVersionUID = 1L;
+	
 	Toolbar toolbar = new Toolbar();
+	
 	//sets all the item pickups to false so the inventory starts empty and the items spawn
 	static boolean flaskpickup = false;
 	static boolean jugpickup = false;
