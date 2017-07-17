@@ -20,7 +20,8 @@ public class Toolbar {
 		toolBar.setBackground(Color.RED);
 		toolBar.setBounds(0, 553, 782, 50);
 		panel.add(toolBar);
-	
+		
+		//TODO: Toolbar
 		if(Items.flaskpickup == true)
 		{
 			JButton btnHydrogen = new JButton("Hydrogen");

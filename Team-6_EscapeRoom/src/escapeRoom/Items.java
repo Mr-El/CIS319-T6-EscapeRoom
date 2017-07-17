@@ -16,6 +16,7 @@ import javax.swing.*;
  */
 public class Items extends JFrame {	
 	Toolbar toolbar = new Toolbar();
+	//sets all the item pickups to false so the inventory starts empty and the items spawn
 	static boolean flaskpickup = false;
 	static boolean jugpickup = false;
 	static boolean bookpickup = false;
@@ -25,8 +26,10 @@ public class Items extends JFrame {
 	static boolean lighterpickup = false;
 	static boolean key2pickup = false;
 	
+	//method for item Hydrogen Flask
 	public static Component btnFlask()
 	{
+		//creates the button for the flask
 		JButton btnFlask = new JButton();
 		btnFlask.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_blue.png")));
 		btnFlask.setBounds(607, 351, 141, 103);
@@ -41,6 +44,7 @@ public class Items extends JFrame {
 						"It's a Flask of Hyrdrogen, still cold and liquified. Maybe you can combine this with something.",
 					    "Flask of Hydrogen",
 						JOptionPane.INFORMATION_MESSAGE);
+				//pickup is now set to true so the item will no longer spawn
 				flaskpickup = true;
 				Toolbar.bar();
 			}
@@ -48,8 +52,10 @@ public class Items extends JFrame {
 		return btnFlask;
 	}
 	
+	//Method for the item Water Jug
 	public static Component btnJug()
 	{
+		//creates the Water Jug button
 		JButton btnJug = new JButton();
 		btnJug.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/waterjug1.png")));
 		btnJug.setBounds(219, 409, 85, 87);
@@ -65,6 +71,7 @@ public class Items extends JFrame {
 						"This water is cold and fresh, maybe you should add it to something.",
 						"Jug of Water",
 						JOptionPane.INFORMATION_MESSAGE);
+				//pickup is now set to true so the item will no longer spawn
 				jugpickup = true;
 			}
 		});
@@ -72,6 +79,7 @@ public class Items extends JFrame {
 		return btnJug;
 	}
 	
+	//Method for the item Textbook
 	public static Component btnBook() {
 		JButton btnBook = new JButton();
 		btnBook.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/textbook.png")));
@@ -87,6 +95,7 @@ public class Items extends JFrame {
 						"By the cover, it seems this is a textbook for chemistry. Maybe it contains the answers to getting out of this room.",
 						"Chemistry Textbook",
 						JOptionPane.INFORMATION_MESSAGE);
+				//pickup is now set to true so the item will no longer spawn
 				bookpickup = true;
 			}
 		});
@@ -95,6 +104,7 @@ public class Items extends JFrame {
 		return btnBook;
 	}
 	
+	//Method for the item Green Flask
 	public static Component btnGreenFlask() {
 		JButton btngFlask = new JButton();
 		btngFlask.setContentAreaFilled(false);
@@ -106,6 +116,7 @@ public class Items extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				btngFlask.setVisible(false);
 				//btnToolFlask.setVisible(true);
+				//pickup is now set to true so the item will no longer spawn
 				gflaskpickup = true;
 			}
 		});
@@ -114,7 +125,9 @@ public class Items extends JFrame {
 		
 	}
 	
+	//Method for the item Paper
 	public static Component Paper() {
+		//creates the paper button
 		JButton btnPaper = new JButton();
 		btnPaper.setContentAreaFilled(false);
 		btnPaper.setBorderPainted(false);
@@ -127,6 +140,7 @@ public class Items extends JFrame {
 				JOptionPane.showMessageDialog(new JFrame(), "This slip of paper says that to mix chemical one with chemical two",
 						"Cheet Sheet",
 						JOptionPane.INFORMATION_MESSAGE);
+				//pickup is now set to true so the item will no longer spawn
 				paperpickup = true;
 				
 			}
@@ -134,7 +148,9 @@ public class Items extends JFrame {
 		return btnPaper;
 	}
 	
+	//Method for the item Key
 	public static Component btnKey() {
+		//creates the key button
 		JButton btnKey = new JButton();
 		btnKey.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/key.png")));
 		btnKey.setBounds(32, 469, 67, 50);
@@ -150,6 +166,7 @@ public class Items extends JFrame {
 						"Key",
 						JOptionPane.INFORMATION_MESSAGE);
 				//btnKey_1.setVisible(true);
+				//pickup is now set to true so the item will no longer spawn
 				keypickup = true;
 			}
 		});
@@ -157,7 +174,9 @@ public class Items extends JFrame {
 		return btnKey;
 	}
 	
+	//Method for the item Lighter
 	public static Component btnLighter() {
+		//creates the lighter button
 		JButton btnLighter = new JButton();
 		btnLighter.setIcon(new ImageIcon(ChemistryTeachersDrawer.class.getResource("/Images/lighter.png")));
 		btnLighter.setBounds(527, 397, 118, 61);
@@ -174,7 +193,9 @@ public class Items extends JFrame {
 		return btnLighter;
 	}
 	
+	//Method for the item Key 2
 	public static Component btnKey2() {
+		//creates the key 2 button
 		JButton btnKey = new JButton();
 		btnKey.setIcon(new ImageIcon(ChemistryTeachersDrawer.class.getResource("/Images/key.png")));
 		btnKey.setBounds(260, 87, 97, 25);
@@ -184,6 +205,7 @@ public class Items extends JFrame {
 		btnKey.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnKey.setVisible(false);
+				//pickup is now set to true so the item will no longer spawn
 				key2pickup = true;
 			}
 		});

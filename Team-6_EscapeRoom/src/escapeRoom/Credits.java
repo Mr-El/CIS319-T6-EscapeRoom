@@ -43,6 +43,7 @@ public class Credits extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//jLabels to output the credits
 		JLabel lblCredits = new JLabel("<HTML><U>Credits:</U></HTML>"); //Underlines font
 		lblCredits.setFont(new Font("Tele-Marines", Font.BOLD | Font.ITALIC, 17));
 		lblCredits.setBounds(0, 0, 126, 25);

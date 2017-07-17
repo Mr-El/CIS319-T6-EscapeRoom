@@ -39,6 +39,7 @@ public class ChemistryTeachersDesk extends JFrame {
 	 * Create the frame.
 	 */
 	public ChemistryTeachersDesk() {
+		//Creates the frame 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Items items = new Items();
 		Toolbar toolbar = new Toolbar();
@@ -54,9 +55,10 @@ public class ChemistryTeachersDesk extends JFrame {
 			contentPane.add(Items.btnFlask());
 		}
 		
+		//adds/updates the toolbar
 		contentPane.add(Toolbar.bar());
 		
-		
+		//creates a button to view the periodic table
 		JButton btnPeriodicTable = new JButton();
 		btnPeriodicTable.setOpaque(false);
 		btnPeriodicTable.setContentAreaFilled(false);
@@ -69,6 +71,7 @@ public class ChemistryTeachersDesk extends JFrame {
 			}
 		});
 		
+		//creates a back button to let you return to your previous location
 		JButton btnBack = new JButton("");
 		btnBack.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/back.png")));
 		btnBack.addActionListener(new ActionListener() {
@@ -84,11 +87,12 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnBack.setContentAreaFilled(false);
 		btnBack.setBorderPainted(false);
 		
-		
-		if(items.flaskpickup == true) {
+		//toolbar update
+		if(Items.flaskpickup == true) {
 			Toolbar.bar();
 		}
 		
+		//creates a button for the monitor
 		JButton btnMonitor = new JButton("Monitor");
 		btnMonitor.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/desktop.png")));
 		btnMonitor.addActionListener(new ActionListener() {
@@ -103,6 +107,7 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnMonitor.setContentAreaFilled(false);
 		btnMonitor.setBorderPainted(false);
 		
+		//creates a button that plays a locked sound for items unreachable
 		JButton btnLocked = new JButton("");
 		btnLocked.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -116,12 +121,15 @@ public class ChemistryTeachersDesk extends JFrame {
 				
 			}
 		});
+		
+		
 		btnLocked.setBounds(636, 477, 97, 54);
 		contentPane.add(btnLocked);
 		btnLocked.setOpaque(false);
 		btnLocked.setContentAreaFilled(false);
 		btnLocked.setBorderPainted(false);
 		
+		//???
 		JButton btnChair = new JButton("");
 		btnChair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

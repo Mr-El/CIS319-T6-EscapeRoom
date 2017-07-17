@@ -68,6 +68,7 @@ public class ChemistryRoom extends JFrame {
 		
 		contentPane.add(Toolbar.bar()); //adds the toolbar class
 		
+		//Creates the button that leads to the door of the the room
 		JButton btn2Door = new JButton();
 		btn2Door.setBounds(-83, 132, 154, 184);
 		contentPane.add(btn2Door);
@@ -82,6 +83,7 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
+		//Creates a button that leads to the teachers desk
 		JButton btnTeachersDesk = new JButton();
 		btnTeachersDesk.setBounds(644, 286, 169, 265);
 		contentPane.add(btnTeachersDesk);
@@ -96,6 +98,7 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
+		//Creates a button that lets the user look at the periodic table
 		JButton btnPeriodicTable = new JButton();
 		btnPeriodicTable.setBounds(732, 26, 81, 222);
 		contentPane.add(btnPeriodicTable);
@@ -110,6 +113,7 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
+		//if statement that spawn items and keep them despawned after pickup
 		if(items.bookpickup == false)
 		{
 			contentPane.add(Items.btnBook());
@@ -119,6 +123,7 @@ public class ChemistryRoom extends JFrame {
 			contentPane.add(Items.btnGreenFlask());
 		}
 		
+		//????
 		JButton btnChair = new JButton();
 		btnChair.setBounds(26, 329, 147, 222);
 		contentPane.add(btnChair);

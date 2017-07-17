@@ -37,6 +37,7 @@ public class ChemistryDoor extends JFrame {
 	 * Create the frame.
 	 */
 	public ChemistryDoor() {
+		//creates the game frame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 650);
 		contentPane = new JPanel();
@@ -47,6 +48,7 @@ public class ChemistryDoor extends JFrame {
 		
 		contentPane.add(Toolbar.bar()); //adds the toolbar
 		
+		//if statments that spawn the items
 		if (items.jugpickup == false) {
 			contentPane.add(Items.btnJug());
 		}
@@ -59,6 +61,7 @@ public class ChemistryDoor extends JFrame {
 			contentPane.add(Items.btnKey());
 		}
 		
+		//Creates a back button that will bring you to the main area
 		JButton btnBack = new JButton("");
 		btnBack.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/back.png")));
 		btnBack.setBounds(0, 0, 95, 61);
@@ -73,6 +76,7 @@ public class ChemistryDoor extends JFrame {
 			}
 		});
 		
+		//Creates a button for the lock on the door
 		JButton btnLock = new JButton("");
 		btnLock.setBounds(530, 253, 40, 61);
 		contentPane.add(btnLock);
@@ -84,7 +88,7 @@ public class ChemistryDoor extends JFrame {
 				Sound1.sound2.play1();
 			}
 		});
-		
+		//allows the player to attempt opening the door
 		JButton btnKnock = new JButton("");
 		btnKnock.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

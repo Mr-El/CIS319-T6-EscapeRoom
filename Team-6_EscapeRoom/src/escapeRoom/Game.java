@@ -54,6 +54,17 @@ public class Game {
 		lblClassroomEscape.setBounds(173, 152, 437, 91);
 		frame.getContentPane().add(lblClassroomEscape);
 		
+		//sets the background for the main menu
+		JLabel lblBackground = new JLabel();
+		lblBackground.setIcon(new ImageIcon(Game.class.getResource("/Images/Chemestry-Escape Room.png")));
+		lblBackground.setBounds(0, 0, 782, 553);
+		frame.getContentPane().add(lblBackground);
+		lblBackground.revalidate();
+		lblBackground.repaint();
+				
+		Sound1.sound1.play1(); //plays the music
+		
+		//Below creates the buttons and listeners for "Play" "Options" "Credits" "Music"
 		JButton btnPlay = new JButton("Play");
 		btnPlay.setBounds(540, 367, 97, 25);
 		frame.getContentPane().add(btnPlay);
@@ -85,15 +96,6 @@ public class Game {
 		panel.setBounds(173, 153, 437, 91);
 		frame.getContentPane().add(panel);
 		
-		JLabel lblBackground = new JLabel();
-		lblBackground.setIcon(new ImageIcon(Game.class.getResource("/Images/Chemestry-Escape Room.png")));
-		lblBackground.setBounds(0, 0, 782, 553);
-		frame.getContentPane().add(lblBackground);
-		lblBackground.revalidate();
-		lblBackground.repaint();
-		
-		Sound1.sound1.play1(); //plays the music
-		
 		//Performs actions on buttons
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -119,6 +121,7 @@ public class Game {
 				System.exit(0);
 			}
 		});
+		
 	}
 
 	/**
