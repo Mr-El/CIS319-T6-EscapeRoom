@@ -14,6 +14,7 @@ package escapeRoom;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,17 +22,19 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JEditorPane;
 
 public class ChemistryRoom extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	
-	
+	static Thread timer = new Thread();
 	
 	/**
 	 * Launch the application.
+	 * @throws InterruptedException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		JFrame frame = new JFrame("Escape Room - Game");
 		frame.setSize(800, 650);
 		frame.setVisible(true);
@@ -54,8 +57,9 @@ public class ChemistryRoom extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws InterruptedException 
 	 */
-	public ChemistryRoom() {
+	public ChemistryRoom() throws InterruptedException {
 		@SuppressWarnings("unused")
 		JFrame frame = new JFrame();
 		Items items = new Items();
@@ -67,9 +71,9 @@ public class ChemistryRoom extends JFrame {
 		contentPane.setLayout(null);
 		
 		
-		//Rectangle toolbar experiment
-		
 		contentPane.add(Toolbar.bar()); //adds the toolbar class
+		contentPane.add(TimerTest.Timer());
+		
 		
 		//Creates the button that leads to the door of the the room
 		JButton btn2Door = new JButton();
@@ -116,13 +120,15 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
+		
+		
 		//if statement that spawn items and keep them despawned after pickup
-		if(items.bookpickup == 0)
+		if(Items.bookpickup == 0)
 		{
 			contentPane.add(Items.btnBook());
 		}
 		
-		if (items.gflaskpickup == 0) {
+		if (Items.gflaskpickup == 0) {
 			contentPane.add(Items.btnGreenFlask());
 		}
 		
@@ -139,10 +145,11 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
+		
+		
 		JLabel lblNewLabel = new JLabel("Image");
 		lblNewLabel.setBounds(0, 0, 938, 578);
 		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/Chemestry-Escape Room.png")));
 		contentPane.add(lblNewLabel);
 	}
-
 }

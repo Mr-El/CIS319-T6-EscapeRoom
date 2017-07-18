@@ -57,6 +57,8 @@ public class ChemistryTeachersDesk extends JFrame {
 		contentPane.setLayout(null);
 		Toolbar.bar();
 		
+		contentPane.add(TimerTest.Timer());
+		
 		//Regular Buttons
 		if(Items.flaskpickup == 0) {
 			contentPane.add(Items.btnFlask());
@@ -83,7 +85,12 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnBack.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/back.png")));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				new ChemistryRoom().setVisible(true);
+				try {
+					new ChemistryRoom().setVisible(true);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				dispose(); //closes the previous window saving memory
 			}
 		});

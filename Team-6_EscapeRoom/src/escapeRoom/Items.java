@@ -36,8 +36,9 @@ public class Items extends JFrame {
 	static int keypickup = 0;
 	static int lighterpickup = 0;
 	static int key2pickup = 0;
+	static int bunsonpickup = 0;
 	
-	int allitems = flaskpickup + jugpickup + bookpickup + gflaskpickup + paperpickup + keypickup + lighterpickup + key2pickup;
+	int allitems = flaskpickup + gflaskpickup + lighterpickup + bunsonpickup + jugpickup;
 	
 	//method for item Hydrogen Flask
 	public static Component btnFlask()
@@ -128,6 +129,10 @@ public class Items extends JFrame {
 		btngFlask.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				btngFlask.setVisible(false);
+				JOptionPane.showMessageDialog(new JFrame(), 
+						"It's a strange chemical; hard to tell from the color. But the label says \"Flouride.\"",
+						"Cheet Sheet",
+						JOptionPane.INFORMATION_MESSAGE);
 				//btnToolFlask.setVisible(true);
 				//pickup is now set to true so the item will no longer spawn
 				gflaskpickup = 1;
@@ -150,7 +155,8 @@ public class Items extends JFrame {
 		btnPaper.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				btnPaper.setVisible(false);
-				JOptionPane.showMessageDialog(new JFrame(), "This slip of paper says that to mix chemical one with chemical two",
+				JOptionPane.showMessageDialog(new JFrame(), 
+						"This slip of paper says that to mix hydrogen with flouride to produce Hydroflouric acid.",
 						"Cheet Sheet",
 						JOptionPane.INFORMATION_MESSAGE);
 				//pickup is now set to true so the item will no longer spawn
@@ -219,10 +225,35 @@ public class Items extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				btnKey.setVisible(false);
 				//pickup is now set to true so the item will no longer spawn
+				JOptionPane.showMessageDialog(new JFrame(), 
+						"It's another key but I don't think it's to the door.",
+						"Cheet Sheet",
+						JOptionPane.INFORMATION_MESSAGE);
 				key2pickup = 1;
 			}
 		});
 		return btnKey;
+	}
+	
+	public static Component btnBunsion() {
+		JButton btnBunson = new JButton("");
+		btnBunson.setIcon(new ImageIcon(Cabinet.class.getResource("/Images/bunsion.png")));
+		btnBunson.setBounds(496, 271, 90, 76);
+		btnBunson.setBorderPainted(false);
+		btnBunson.setContentAreaFilled(false);
+		btnBunson.setOpaque(false);
+		btnBunson.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnBunson.setVisible(false);
+				JOptionPane.showMessageDialog(new JFrame(), 
+						"This is a kit for a bunsen burner, maybe heating these chemicals together can make something for the door.",
+						"Cheet Sheet",
+						JOptionPane.INFORMATION_MESSAGE);
+				bunsonpickup = 1;
+			}
+		});
+		
+		return btnBunson;
 	}
 }
 

@@ -55,6 +55,7 @@ public class ChemistryDoor extends JFrame {
 		contentPane.setLayout(null);
 		Items items = new Items();
 		
+		contentPane.add(TimerTest.Timer());
 		contentPane.add(Toolbar.bar()); //adds the toolbar
 		
 		//if statments that spawn the items
@@ -80,7 +81,12 @@ public class ChemistryDoor extends JFrame {
 		btnBack.setOpaque(false);
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				new ChemistryRoom().setVisible(true);
+				try {
+					new ChemistryRoom().setVisible(true);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				dispose();
 			}
 		});
@@ -94,7 +100,7 @@ public class ChemistryDoor extends JFrame {
 		btnBack.setOpaque(false);
 		btnLock.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (items.allitems == 8) {
+				if (items.allitems >= 4) { //could not work at ==5
 					new Hallway().setVisible(true);
 					dispose();
 				}
@@ -117,6 +123,24 @@ public class ChemistryDoor extends JFrame {
 		btnKnock.setOpaque(false);
 		btnKnock.setContentAreaFilled(false);
 		btnKnock.setBorderPainted(false);
+		
+		JButton btnCabinet = new JButton("");
+		btnCabinet.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (items.key2pickup == 1) {
+					new Cabinet().setVisible(true);
+					dispose();
+				}
+				else {
+					Sound1.sound2.play1();
+				}
+			}
+		});
+		btnCabinet.setBounds(-2, 253, 87, 122);
+		contentPane.add(btnCabinet);
+		btnCabinet.setOpaque(false);
+		btnCabinet.setContentAreaFilled(false);
+		btnCabinet.setBorderPainted(false);
 		
 		JLabel lblBackground = new JLabel("");
 		lblBackground.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/door-01.png")));

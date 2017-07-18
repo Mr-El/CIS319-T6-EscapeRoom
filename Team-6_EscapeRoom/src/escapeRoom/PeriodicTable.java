@@ -55,6 +55,8 @@ public class PeriodicTable extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		contentPane.add(TimerTest.Timer());
+		
 		//Creates a back button for the player to return to the previous location
 		JButton button = new JButton("<- Back");
 		button.setBounds(12, 573, 77, 25);

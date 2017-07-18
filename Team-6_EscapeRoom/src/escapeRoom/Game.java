@@ -24,6 +24,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.JDesktopPane;
 
 /**
  * @author Mr_El
@@ -64,14 +65,6 @@ public class Game {
 		lblClassroomEscape.setFont(new Font("Tele-Marines", Font.BOLD | Font.ITALIC, 26));
 		lblClassroomEscape.setBounds(173, 152, 437, 91);
 		frame.getContentPane().add(lblClassroomEscape);
-		
-		//sets the background for the main menu
-		JLabel lblBackground = new JLabel();
-		lblBackground.setIcon(new ImageIcon(Game.class.getResource("/Images/Chemestry-Escape Room.png")));
-		lblBackground.setBounds(0, 0, 782, 553);
-		frame.getContentPane().add(lblBackground);
-		lblBackground.revalidate();
-		lblBackground.repaint();
 				
 		Sound1.sound1.play1(); //plays the music
 		
@@ -107,11 +100,23 @@ public class Game {
 		panel.setBounds(173, 153, 437, 91);
 		frame.getContentPane().add(panel);
 		
+		//sets the background for the main menu
+		JLabel lblBackground = new JLabel();
+		lblBackground.setIcon(new ImageIcon(Game.class.getResource("/Images/Chemestry-Escape Room.png")));
+		lblBackground.setBounds(0, 0, 782, 553);
+		frame.getContentPane().add(lblBackground);
+		lblBackground.revalidate();
+		lblBackground.repaint();
+		
 		//Performs actions on buttons
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				new ChemistryRoom().setVisible(true);	
+				try {
+					new ChemistryRoom().setVisible(true);
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+				}	
 			}	
 		});
 		
