@@ -1,22 +1,29 @@
 package escapeRoom;
 
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        *
+ ** * * * * * * * * * * * */
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JToolBar;
-import java.awt.Color;
 
-@SuppressWarnings("serial")
 public class ChemistryTeachersDesk extends JFrame {
-
+	private static final long serialVersionUID = 1L;
 	public JPanel contentPane;
 
 	/**
@@ -39,8 +46,11 @@ public class ChemistryTeachersDesk extends JFrame {
 	 * Create the frame.
 	 */
 	public ChemistryTeachersDesk() {
+		//Creates the frame 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		@SuppressWarnings("unused")
 		Items items = new Items();
+		@SuppressWarnings("unused")
 		Toolbar toolbar = new Toolbar();
 		setBounds(100, 100, 800, 650);
 		contentPane = new JPanel();
@@ -49,14 +59,17 @@ public class ChemistryTeachersDesk extends JFrame {
 		contentPane.setLayout(null);
 		Toolbar.bar();
 		
+		contentPane.add(TimerTest.Timer());
+		
 		//Regular Buttons
-		if(Items.flaskpickup == false) {
+		if(Items.flaskpickup == 0) {
 			contentPane.add(Items.btnFlask());
 		}
 		
+		//adds/updates the toolbar
 		contentPane.add(Toolbar.bar());
 		
-		
+		//creates a button to view the periodic table
 		JButton btnPeriodicTable = new JButton();
 		btnPeriodicTable.setOpaque(false);
 		btnPeriodicTable.setContentAreaFilled(false);
@@ -69,11 +82,17 @@ public class ChemistryTeachersDesk extends JFrame {
 			}
 		});
 		
+		//creates a back button to let you return to your previous location
 		JButton btnBack = new JButton("");
 		btnBack.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/back.png")));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				new ChemistryRoom().setVisible(true);
+				try {
+					new ChemistryRoom().setVisible(true);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				dispose(); //closes the previous window saving memory
 			}
 		});
@@ -84,11 +103,11 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnBack.setContentAreaFilled(false);
 		btnBack.setBorderPainted(false);
 		
+		//toolbar update
+		Toolbar.bar();
 		
-		if(items.flaskpickup == true) {
-			Toolbar.bar();
-		}
 		
+		//creates a button for the monitor
 		JButton btnMonitor = new JButton("Monitor");
 		btnMonitor.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/desktop.png")));
 		btnMonitor.addActionListener(new ActionListener() {
@@ -103,10 +122,11 @@ public class ChemistryTeachersDesk extends JFrame {
 		btnMonitor.setContentAreaFilled(false);
 		btnMonitor.setBorderPainted(false);
 		
+		//creates a button that plays a locked sound for items unreachable
 		JButton btnLocked = new JButton("");
 		btnLocked.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (Items.keypickup == true) {
+				if (Items.keypickup == 1) {
 					new ChemistryTeachersDrawer().setVisible(true);
 					dispose();
 				}
@@ -116,12 +136,15 @@ public class ChemistryTeachersDesk extends JFrame {
 				
 			}
 		});
+		
+		
 		btnLocked.setBounds(636, 477, 97, 54);
 		contentPane.add(btnLocked);
 		btnLocked.setOpaque(false);
 		btnLocked.setContentAreaFilled(false);
 		btnLocked.setBorderPainted(false);
 		
+		//???
 		JButton btnChair = new JButton("");
 		btnChair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

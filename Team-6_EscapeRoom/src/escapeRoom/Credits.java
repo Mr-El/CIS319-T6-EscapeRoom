@@ -1,20 +1,31 @@
 package escapeRoom;
 
-import java.awt.BorderLayout;
+import java.awt.Color;
+
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        *
+ ** * * * * * * * * * * * */
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.SpringLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.font.TextAttribute;
-import java.util.Map;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-@SuppressWarnings("serial")
 public class Credits extends JFrame {
-
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -37,12 +48,14 @@ public class Credits extends JFrame {
 	 * Create the frame.
 	 */
 	public Credits() {
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 292);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setBackground(Color.green);
 		
+		//jLabels to output the credits
 		JLabel lblCredits = new JLabel("<HTML><U>Credits:</U></HTML>"); //Underlines font
 		lblCredits.setFont(new Font("Tele-Marines", Font.BOLD | Font.ITALIC, 17));
 		lblCredits.setBounds(0, 0, 126, 25);

@@ -1,34 +1,37 @@
 package escapeRoom;
 
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        *
+ ** * * * * * * * * * * * */
+
 import java.awt.EventQueue;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.Color;
 
 public class ChemistryRoom extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	
-	
+	static Thread timer = new Thread();
 	
 	/**
 	 * Launch the application.
+	 * @throws InterruptedException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		JFrame frame = new JFrame("Escape Room - Game");
 		frame.setSize(800, 650);
 		frame.setVisible(true);
@@ -51,10 +54,12 @@ public class ChemistryRoom extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws InterruptedException 
 	 */
-	public ChemistryRoom() {
+	public ChemistryRoom() throws InterruptedException {
 		@SuppressWarnings("unused")
 		JFrame frame = new JFrame();
+		@SuppressWarnings("unused")
 		Items items = new Items();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 650);
@@ -64,10 +69,11 @@ public class ChemistryRoom extends JFrame {
 		contentPane.setLayout(null);
 		
 		
-		//Rectangle toolbar experiment
-		
 		contentPane.add(Toolbar.bar()); //adds the toolbar class
+		contentPane.add(TimerTest.Timer());
 		
+		
+		//Creates the button that leads to the door of the the room
 		JButton btn2Door = new JButton();
 		btn2Door.setBounds(-83, 132, 154, 184);
 		contentPane.add(btn2Door);
@@ -82,6 +88,7 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
+		//Creates a button that leads to the teachers desk
 		JButton btnTeachersDesk = new JButton();
 		btnTeachersDesk.setBounds(644, 286, 169, 265);
 		contentPane.add(btnTeachersDesk);
@@ -96,6 +103,7 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
+		//Creates a button that lets the user look at the periodic table
 		JButton btnPeriodicTable = new JButton();
 		btnPeriodicTable.setBounds(732, 26, 81, 222);
 		contentPane.add(btnPeriodicTable);
@@ -110,15 +118,19 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
-		if(items.bookpickup == false)
+		
+		
+		//if statement that spawn items and keep them despawned after pickup
+		if(Items.bookpickup == 0)
 		{
 			contentPane.add(Items.btnBook());
 		}
 		
-		if (items.gflaskpickup == false) {
+		if (Items.gflaskpickup == 0) {
 			contentPane.add(Items.btnGreenFlask());
 		}
 		
+		//????
 		JButton btnChair = new JButton();
 		btnChair.setBounds(26, 329, 147, 222);
 		contentPane.add(btnChair);
@@ -131,10 +143,11 @@ public class ChemistryRoom extends JFrame {
 			}
 		});
 		
+		
+		
 		JLabel lblNewLabel = new JLabel("Image");
 		lblNewLabel.setBounds(0, 0, 938, 578);
 		lblNewLabel.setIcon(new ImageIcon(ChemistryRoom.class.getResource("/Images/Chemestry-Escape Room.png")));
 		contentPane.add(lblNewLabel);
 	}
-
 }

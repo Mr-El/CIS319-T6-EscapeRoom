@@ -1,6 +1,16 @@
 package escapeRoom;
 
-import java.awt.BorderLayout;
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        *
+ ** * * * * * * * * * * * */
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,7 +23,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class ChemistryTeachersDrawer extends JFrame {
-
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -43,11 +53,13 @@ public class ChemistryTeachersDrawer extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		if (Items.lighterpickup == false) {
+		contentPane.add(TimerTest.Timer());
+		
+		if (Items.lighterpickup == 0) {
 			contentPane.add(Items.btnLighter());
 		}
 		
-		if (Items.key2pickup == false) {
+		if (Items.key2pickup == 0) {
 			contentPane.add(Items.btnKey2());
 		}
 		

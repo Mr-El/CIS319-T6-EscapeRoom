@@ -1,5 +1,16 @@
 package escapeRoom;
 
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        * 
+ ** * * * * * * * * * * * */
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
@@ -20,8 +31,9 @@ public class Toolbar {
 		toolBar.setBackground(Color.RED);
 		toolBar.setBounds(0, 553, 782, 50);
 		panel.add(toolBar);
-	
-		if(Items.flaskpickup == true)
+		
+		//TODO: Toolbar
+		if(Items.flaskpickup == 1)
 		{
 			JButton btnHydrogen = new JButton("Hydrogen");
 			btnHydrogen.setIcon(new ImageIcon(ChemistryTeachersDesk.class.getResource("/Images/flask_small.png")));

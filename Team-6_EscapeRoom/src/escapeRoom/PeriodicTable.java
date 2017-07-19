@@ -1,5 +1,16 @@
 package escapeRoom;
 
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        *
+ ** * * * * * * * * * * * */
+
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -35,6 +46,7 @@ public class PeriodicTable extends JFrame {
 	 * Create the frame.
 	 */
 	public PeriodicTable() {
+		//creates the game frame
 		JFrame frame = new JFrame();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 814, 658);
@@ -43,6 +55,9 @@ public class PeriodicTable extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		contentPane.add(TimerTest.Timer());
+		
+		//Creates a back button for the player to return to the previous location
 		JButton button = new JButton("<- Back");
 		button.setBounds(12, 573, 77, 25);
 		contentPane.add(button);
@@ -54,7 +69,7 @@ public class PeriodicTable extends JFrame {
 				dispose();
 			}
 		});
-		
+		//displays the table
 		JLabel lblImage = new JLabel("Image");
 		lblImage.setBounds(5, 5, 832, 612);
 		lblImage.setIcon(new ImageIcon(PeriodicTable.class.getResource("/Images/Periodic-Table-Color.png")));

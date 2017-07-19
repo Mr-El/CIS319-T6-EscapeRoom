@@ -1,5 +1,16 @@
 package escapeRoom;
 
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        *
+ ** * * * * * * * * * * * */
+
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -53,7 +64,10 @@ public class Game {
 		lblClassroomEscape.setFont(new Font("Tele-Marines", Font.BOLD | Font.ITALIC, 26));
 		lblClassroomEscape.setBounds(173, 152, 437, 91);
 		frame.getContentPane().add(lblClassroomEscape);
+				
+		Sound1.sound1.play1(); //plays the music
 		
+		//Below creates the buttons and listeners for "Play" "Options" "Credits" "Music"
 		JButton btnPlay = new JButton("Play");
 		btnPlay.setBounds(540, 367, 97, 25);
 		frame.getContentPane().add(btnPlay);
@@ -85,6 +99,7 @@ public class Game {
 		panel.setBounds(173, 153, 437, 91);
 		frame.getContentPane().add(panel);
 		
+		//sets the background for the main menu
 		JLabel lblBackground = new JLabel();
 		lblBackground.setIcon(new ImageIcon(Game.class.getResource("/Images/Chemestry-Escape Room.png")));
 		lblBackground.setBounds(0, 0, 782, 553);
@@ -92,13 +107,15 @@ public class Game {
 		lblBackground.revalidate();
 		lblBackground.repaint();
 		
-		Sound1.sound1.play1(); //plays the music
-		
 		//Performs actions on buttons
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				new ChemistryRoom().setVisible(true);	
+				try {
+					new ChemistryRoom().setVisible(true);
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+				}	
 			}	
 		});
 		
@@ -119,6 +136,7 @@ public class Game {
 				System.exit(0);
 			}
 		});
+		
 	}
 
 	/**

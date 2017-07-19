@@ -1,6 +1,16 @@
 package escapeRoom;
 
-import java.awt.BorderLayout;
+/** * * * * * * * * * * * *
+ * CIS319    -    Team 6  *
+ * Chemistry Escape Room  *
+ *                        *
+ * By: Elliott Britton    *
+ *     Matthew Hahm       *
+ *     Malachi Manno      *
+ *     Eric Barker        *
+ *                        *
+ ** * * * * * * * * * * * */
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -11,10 +21,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JToolBar;
 
 public class ChemistryDoor extends JFrame {
-
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -37,6 +46,7 @@ public class ChemistryDoor extends JFrame {
 	 * Create the frame.
 	 */
 	public ChemistryDoor() {
+		//creates the game frame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 650);
 		contentPane = new JPanel();
@@ -45,20 +55,23 @@ public class ChemistryDoor extends JFrame {
 		contentPane.setLayout(null);
 		Items items = new Items();
 		
+		contentPane.add(TimerTest.Timer());
 		contentPane.add(Toolbar.bar()); //adds the toolbar
 		
-		if (items.jugpickup == false) {
+		//if statments that spawn the items
+		if (Items.jugpickup == 0) {
 			contentPane.add(Items.btnJug());
 		}
 		
-		if (items.paperpickup == false) {
+		if (Items.paperpickup == 0) {
 			contentPane.add(Items.Paper());
 		}
 
-		if (items.keypickup == false) {
+		if (Items.keypickup == 0) {
 			contentPane.add(Items.btnKey());
 		}
 		
+		//Creates a back button that will bring you to the main area
 		JButton btnBack = new JButton("");
 		btnBack.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/back.png")));
 		btnBack.setBounds(0, 0, 95, 61);
@@ -68,11 +81,17 @@ public class ChemistryDoor extends JFrame {
 		btnBack.setOpaque(false);
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				new ChemistryRoom().setVisible(true);
+				try {
+					new ChemistryRoom().setVisible(true);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				dispose();
 			}
 		});
 		
+		//Creates a button for the lock on the door
 		JButton btnLock = new JButton("");
 		btnLock.setBounds(530, 253, 40, 61);
 		contentPane.add(btnLock);
@@ -81,10 +100,18 @@ public class ChemistryDoor extends JFrame {
 		btnBack.setOpaque(false);
 		btnLock.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Sound1.sound2.play1();
+				if (items.allitems >= 4) { //could not work at ==5
+					new Hallway().setVisible(true);
+					dispose();
+				}
+				
+				else {
+					Sound1.sound2.play1();
+				}
 			}
 		});
 		
+		//if player touches the glass of the door, a knocking sound will play
 		JButton btnKnock = new JButton("");
 		btnKnock.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -96,6 +123,24 @@ public class ChemistryDoor extends JFrame {
 		btnKnock.setOpaque(false);
 		btnKnock.setContentAreaFilled(false);
 		btnKnock.setBorderPainted(false);
+		
+		JButton btnCabinet = new JButton("");
+		btnCabinet.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (Items.key2pickup == 1) {
+					new Cabinet().setVisible(true);
+					dispose();
+				}
+				else {
+					Sound1.sound2.play1();
+				}
+			}
+		});
+		btnCabinet.setBounds(-2, 253, 87, 122);
+		contentPane.add(btnCabinet);
+		btnCabinet.setOpaque(false);
+		btnCabinet.setContentAreaFilled(false);
+		btnCabinet.setBorderPainted(false);
 		
 		JLabel lblBackground = new JLabel("");
 		lblBackground.setIcon(new ImageIcon(ChemistryDoor.class.getResource("/Images/door-01.png")));
