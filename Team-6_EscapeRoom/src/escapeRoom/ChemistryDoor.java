@@ -59,15 +59,15 @@ public class ChemistryDoor extends JFrame {
 		contentPane.add(Toolbar.bar()); //adds the toolbar
 		
 		//if statments that spawn the items
-		if (items.jugpickup == 0) {
+		if (Items.jugpickup == 0) {
 			contentPane.add(Items.btnJug());
 		}
 		
-		if (items.paperpickup == 0) {
+		if (Items.paperpickup == 0) {
 			contentPane.add(Items.Paper());
 		}
 
-		if (items.keypickup == 0) {
+		if (Items.keypickup == 0) {
 			contentPane.add(Items.btnKey());
 		}
 		
@@ -127,7 +127,7 @@ public class ChemistryDoor extends JFrame {
 		JButton btnCabinet = new JButton("");
 		btnCabinet.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (items.key2pickup == 1) {
+				if (Items.key2pickup == 1) {
 					new Cabinet().setVisible(true);
 					dispose();
 				}

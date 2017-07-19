@@ -48,7 +48,9 @@ public class ChemistryTeachersDesk extends JFrame {
 	public ChemistryTeachersDesk() {
 		//Creates the frame 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		@SuppressWarnings("unused")
 		Items items = new Items();
+		@SuppressWarnings("unused")
 		Toolbar toolbar = new Toolbar();
 		setBounds(100, 100, 800, 650);
 		contentPane = new JPanel();

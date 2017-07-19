@@ -70,7 +70,9 @@ public class Hallway extends JFrame {
 		JButton btnGameOver = new JButton("");
 		btnGameOver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.exit(0);
+				Sound1.sound1.stop1();
+				new Credits().setVisible(true);
+				dispose();
 			}
 		});
 		btnGameOver.setIcon(new ImageIcon(Hallway.class.getResource("/Images/gameover.png")));

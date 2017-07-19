@@ -24,7 +24,6 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
-import javax.swing.JDesktopPane;
 
 /**
  * @author Mr_El

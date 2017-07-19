@@ -14,15 +14,12 @@ package escapeRoom;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.URL;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JEditorPane;
 
 public class ChemistryRoom extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -62,6 +59,7 @@ public class ChemistryRoom extends JFrame {
 	public ChemistryRoom() throws InterruptedException {
 		@SuppressWarnings("unused")
 		JFrame frame = new JFrame();
+		@SuppressWarnings("unused")
 		Items items = new Items();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 650);

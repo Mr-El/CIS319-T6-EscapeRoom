@@ -1,5 +1,7 @@
 package escapeRoom;
 
+import java.awt.Color;
+
 /** * * * * * * * * * * * *
  * CIS319    -    Team 6  *
  * Chemistry Escape Room  *
@@ -18,6 +20,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Credits extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -43,11 +48,12 @@ public class Credits extends JFrame {
 	 * Create the frame.
 	 */
 	public Credits() {
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 292);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setBackground(Color.green);
 		
 		//jLabels to output the credits
 		JLabel lblCredits = new JLabel("<HTML><U>Credits:</U></HTML>"); //Underlines font

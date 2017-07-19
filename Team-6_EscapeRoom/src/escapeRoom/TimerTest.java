@@ -16,10 +16,10 @@ public class TimerTest {
 	 * @wbp.parser.entryPoint
 	 */
 	public static Component Timer() {
-
         final JFrame frm = new JFrame("Countdown");
         final JLabel countdownLabel = new JLabel("03:00");
         countdownLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
+        countdownLabel.setBounds(714, 13, 56, 16);
         final Timer t = new Timer(1000, new ActionListener() {
         	int time = 180;
 			@Override
