@@ -38,7 +38,7 @@ public class Toolbar {
 							JOptionPane.INFORMATION_MESSAGE);
 				}
 			});
-			toolBar.add(btnHydrogen);
+			//toolBar.add(btnHydrogen);
 			return btnHydrogen;
 		}
 		return toolBar;

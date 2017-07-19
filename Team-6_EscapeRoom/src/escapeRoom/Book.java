@@ -49,7 +49,7 @@ public class Book extends JFrame {
 		lblBook.setBounds(161, 58, 330, 196);
 		contentPane.add(lblBook);
 		
-		JLabel lblThisIsThe = new JLabel("This is the Chemistry Book. It contains information on the chemicals you need.");
+		JLabel lblThisIsThe = new JLabel("Intructions:\nThis is the Chemistry Book. It contains information on the chemicals you need.");
 		lblThisIsThe.setBounds(0, 13, 447, 43);
 		contentPane.add(lblThisIsThe);
 		

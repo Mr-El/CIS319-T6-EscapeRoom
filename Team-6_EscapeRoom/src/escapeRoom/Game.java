@@ -124,9 +124,9 @@ public class Game {
 	/**
 	 * Create the application.
 	 */
-	public Game() {
-		initialize();
-	}
+	//public Game() {
+	//	initialize();
+	//}
 
 	/**
 	 * Initialize the contents of the frame.
